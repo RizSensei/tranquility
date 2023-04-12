@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <script
+      src="https://kit.fontawesome.com/0a09f83869.js"
+      crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./iclick.css" />
+    <script src="./JQUERY/jquery.min.js"></script>
+    <script src="./iclick.js"></script> -->
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+      * {
+        /* font-family: "Poppins", sans-serif; */
+        font-family: "Quicksand";
+      }
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+    </style>
+</head>
+<body class="bg-gray-100">
+
+
+    <!--TOP BAR------------------------------->
+    <header>
+        
+        <div class="bg-gradient-to-r from-transparent to-gray-600 shadow-md">
+          <div class="flex container mx-auto justify-between py-2 text-gray-800">
+            <div class="pl-2 md:flex md:gap-4">
+              <!--email-->
+              <div class="flex gap-2 items-center">
+                <i class="fa-regular fa-envelope"></i>
+                <p class="font-bold">infoiClick@gmail.com</p>
+              </div>
+              <!--phone-->
+              <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-phone"></i>
+                <p class="font-bold">+1234 5678 90</p>
+              </div>
+            </div>
+            <div>
+              <a class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  px-2 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 btn-floating m-1 hover:scale-110"
+                    style="background-color: #3b5998"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+              <!-- <a href="" class="p-2"
+                ><i class="fa-brands fa-instagram text-orange-400"></i
+              ></a> -->
+              <a class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  px-2 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 btn-floating m-1 hover:scale-110"
+              style="background-color: #0082ca"
+              href="#!"
+              role="button"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+      <!--NAV BAR--------------------------->
+      <nav
+        class="px-5 py-2 sticky top-0 z-10 bg-gradient-to-r from-transparent to-gray-600 shadow md:flex md:items-center md:justify-between font-sans">
+        <div class="flex justify-between items-center">
+          <span class="cursor-pointer bg-white rounded-full p-1">
+            <a href="#home"><img class="h-16" src="/public/images/iclick-logo.png" />
+            </span></a>
+  
+          <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+            <i class="menu fa-solid fa-bars text-white" onclick="Menu(this)"></i>
+          </span>
+        </div>
+  
+        <ul
+          class="md:flex md:items-center font-bold rounded-lg md:static absolute bg-gray-600 text-white w-full left-0 md:w-auto md:py-2 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+          <li
+            class="mx-4 my-8 md:my-0 hover:scale-105 rounded-lg hover:bg-svg-color">
+            <a href="#home" class="text-lg duration-500 p-2">Home</a>
+          </li>
+          <li
+            class="mx-4 my-6 md:my-0 hover:scale-105 rounded-lg hover:bg-svg-color">
+            <a href="#about" class="text-lg duration-500 p-2">About</a>
+          </li>
+          <li
+            class="mx-4 my-6 md:my-0 hover:scale-105 rounded-lg hover:bg-svg-color">
+            <a href="#service" class="text-lg duration-500 p-2">Service</a>
+          </li>
+          <li
+            class="mx-4 my-6 md:my-0 hover:scale-105 rounded-lg hover:bg-svg-color">
+            <a href="#works" class="text-lg duration-500 p-2">Works</a>
+          </li>
+          <li
+            class="mx-4 my-6 md:my-0 hover:scale-105 rounded-lg hover:bg-svg-color">
+            <a href="#contact" class="text-lg duration-500 p-2">Contact</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <script>
+        function Menu(e) {
+          let list = document.querySelector("ul");
+          e.name === "menu"
+            ? ((e.name = "close"),
+              list.classList.add("top-[80px]"),
+              list.classList.add("opacity-100"))
+            : ((e.name = "menu"),
+              list.classList.remove("top-[80px]"),
+              list.classList.remove("opacity-100"));
+        }
+      </script>
+
+      <!--Wave-container-->
+    <div class="wave-container relative bg-white text-white text-center overflow-hidden">
+        <svg class="w-screen h-full pb-10" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" ><path d="M 0,600 C 0,600 0,300 0,300 C 161.59999999999997,240.93333333333334 323.19999999999993,181.86666666666665 485,199 C 646.8000000000001,216.13333333333335 808.8,309.46666666666664 968,339 C 1127.2,368.53333333333336 1283.6,334.26666666666665 1440,300 C 1440,300 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#2252C5" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)">
+
+            <h1 class="animate-bounce font-bold text-3xl md:text-7xl absolute top-10 md:top-12 right-20 lg:top-20 lg:right-64 " id="home">iClick</h1>
+            <p class="font-semibold italic text-sm  md:text-xl absolute top-20 md:top-32 lg:top-40 right-8 md:right-12 lg:right-56">We bring your ideas to Life</p>
+          </path>
+            
+             <img src="../png_images/pngwing.com (1).png" alt="" class="absolute  h-full w-44  md:w-60 lg:w-96 bottom-0 top-0 md:left-24 lg:left-32 object-cover">
+
+             <h1 class="text-black font-bold text-base md:text-2xl lg:text-5xl absolute bottom-2 md:bottom-20 lg:bottom-28  right-8"><span class="text-2xl">We are a dynamic team of</span> <br> <span class="text-svg-color">Innovative, Tech Enthusiastic People </span></h1>
+        
+        </svg>
+        
+        
+         
+    </div>
+
+
+    <!--ABOUT US-->
+    <div class="mt-8 md:mt-20 pb-5" id="about">
+        <div class="flex flex-col text-center items-center">
+          <h1 class="font-bold text-3xl md:text-4xl mt-2" id="about_us">
+            <span class="text-svg-color">ABOUT US</span>
+          </h1>
+          <div class="mt-2 flex justify-center items-center">
+            <hr
+              class="w-64 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out delay-200" />
+          </div>
+          <p class="w-3/4 mt-8 font-semibold italic text-base">
+            At I. Click, you will never be just a client. You are an integral part
+            of our team who inspires us to push digital boundaries.We
+            communicate with you openly and effectively, ensuring that every
+            single decision made exceeds your standards. As passionate designers
+            and developers, we stand at the forefront of current and future
+            technology trends so you, and your brand, never fall behind.
+          </p>
+          <div class="grid md:grid-cols-3 gap-5 lg:gap-20 mt-14 px-10">
+            <div
+              class="bg-white  rounded-lg p-3 flex flex-col items-center gap-2 shadow-md shadow-gray-600 600 hover:scale-105">
+              <img
+                src="/public/png_images/design-thinking.png"
+                alt=""
+                class="mt-2 h-24 max-w-max" />
+              <h1 class="font-semibold text-lg text-svg-color">CREATIVE DESIGN</h1>
+              <p class="text-sm mt-2 font-semibold">
+                We create superior interfaces to help you make meaningful
+                connections with your audience.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-lg p-2 flex flex-col items-center gap-2 shadow-md shadow-gray-600 hover:scale-105">
+              <img
+                src="/public/png_images/community.png"
+                alt=""
+                class="mt-2 h-24 max-w-max" />
+              <h1 class="font-semibold text-lg text-svg-color">WORLD CLASS SERVICE</h1>
+              <p class="text-sm mt-2 font-semibold">
+                Our ideas, experience and know-how can transform your business,
+                engage your customers and grow your brand.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-lg p-2 flex flex-col items-center gap-2 shadow-md shadow-gray-600 hover:scale-105">
+              <img
+                src="/public/png_images/delivery-box.png"
+                alt=""
+                class="mt-2 h-24 max-w-max" />
+              <h1 class="font-semibold text-lg text-svg-color">PRODUCT DELIVERY</h1>
+              <p class="text-sm mt-2 font-semibold">
+                We deliver customization, integration and business process design
+                tools to achieve your goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--SERVICES------------------------->
+    <div class="text-black -z-10 pb-10 mt-14" id="service">
+        <h1 class="font-bold text-4xl pt-10 text-center">
+          <span class="text-svg-color">OUR SERVICES</span>
+        </h1>
+        <div class="mt-2 flex justify-center items-center">
+          <hr
+            class="w-72 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out" />
+        </div>
+        <p class="container mx-auto mt-8 font-semibold text-center italic w-3/4">
+          Our diverse range of expertise and skills ensure that your project gets
+          completed with precision. We take great pride in communicating
+          throughout the process and strive for a customer service experience that
+          is over and above!.
+        </p>
+        <div class="relative mt-12 mde:flex items-center h-full">
+          <img
+            src="/public/images/Dell_XPS_13-removebg-preview.png"
+            alt=""
+            class="md:h-72 lg:h-80 z-10 " />
+  
+          <div
+            class="pl-4  pr-10 mt-4 font-semibold grid grid-cols-2 gap-x-4 gap-y-4">
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">Mobile Application</legend>
+              <p class="text-sm">
+                We have experience developing responsive websites plus native iOS
+                and Android applications.
+              </p>
+            </fieldset>
+  
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">Web Development</legend>
+              <p class="text-sm">
+                Our technical team contains highly experienced & experienced
+                programmers with a broad range of skills.
+              </p>
+            </fieldset>
+  
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">Web Application</legend>
+              <p class="text-sm">
+                Web Applications that work across multiple devices whether native
+                or responsive are almost mandatory now for most businesses.
+              </p>
+            </fieldset>
+  
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">GPS Tracking System</legend>
+              <p class="text-sm">
+                Knowing where your vehicles and assets are at all times gives you
+                the power to make time and money-saving decisions with a quick
+                glance.
+              </p>
+            </fieldset>
+  
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">
+                Digitalization Service
+              </legend>
+              <p class="text-sm">
+                An intelligent approach to digital imaging and document
+                conversion. we digitize and manage all of your documents
+              </p>
+            </fieldset>
+  
+            <fieldset
+              class="bg-white border-2 border-solid border-svgbg-svg-color p-3 rounded-lg shadow-md shadow-blue-600/50 hover:scale-105 transition">
+              <legend class="text-lg font-bold text-svg-color">Email Marketing</legend>
+              <p class="text-sm">
+                Send newsletters, design beautiful email campaigns, and keep in
+                touch with your contacts and customers.
+              </p>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!--PROCESS------------------------------>
+    <div class="w-full container mx-auto mt-14">
+        <div class="flex flex-col items-center">
+          <h1 class="font-bold text-4xl">
+            <span class="text-blue-600">OUR PROCESS</span>
+          </h1>
+          <hr
+            class="w-72 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out" />
+        </div>
+  
+        <div class="flex flex-col-reverse lg:flex lg:flex-row">
+          <div class="flex items-center justify-center">
+            <div
+              class="inline-grid grid-rows-3 justify-items-center gap-5 mt-14 px-10 font-semibold">
+              <div
+                class="bg-white w-60 md:w-1/2 rounded-lg p-3 flex flex-col items-center gap-2 shadow-md shadow-gray-600 hover:scale-105">
+                <h1 class="font-bold text-lg text-svg-color">PLANNING & STRATEGY</h1>
+                <p class="text-sm mt-2">
+                  Website Design - Wireframe and design - Mock-ups - Code valid
+                  XHTML/CSS - Review and approval cycle.
+                </p>
+              </div>
+              <div
+                class="bg-white  w-60 md:w-1/2 rounded-lg p-2 flex flex-col items-center gap-2 shadow-md shadow-gray-600 hover:scale-105">
+                <h1 class="font-bold text-lg text-svg-color">DESIGN & DEVELOP</h1>
+                <p class="text-sm mt-2">
+                  Build development framework - Code templates for each page -
+                  Develop and test special features - Fill with content.
+                </p>
+              </div>
+              <div
+                class="bg-white  w-60 md:w-1/2 rounded-lg p-2 flex flex-col items-center gap-2 shadow-md shadow-gray-600 hover:scale-105">
+                <h1 class="font-bold text-lg text-svg-color">TEST & DELIVER</h1>
+                <p class="text-sm mt-2">
+                  Online marketing and mantenance - Consists of two distinct means
+                  of driving traffic - search and more.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="flex flex-col justify-center items-center mt-5">
+            <img src="/public/png_images/pngwing.com (2).png" alt="" class="" />
+          </div>
+        </div>
+      </div>
+
+      <!--Works-->
+      <div class="h-full w-full mt-16  pb-10 pt-10" id="works">
+        <div class="flex flex-col items-center">
+          <h1 class="font-bold text-4xl">
+            <span class="text-svg-color">OUR  LATEST WORKS</span>
+          </h1>
+          <hr
+            class="w-72 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out" />
+        </div>
+        <div
+          class="flex flex-col items-center justify-center h-full w-full container mx-auto mt-10">
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-7">
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit
+                  voluptatibus.<span class="hidden md:inline"
+                    >Itaque, dignissimos. Nemo, tenetur voluptates.</span
+                  >
+                  
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group resp_works cursor-pointer rounded-lg border-2 border-black overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black">
+              <img
+                src="/public/work-images/Nidan-Hospital.jpg"
+                class="object-cover h-full w-full transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
+                alt="" />
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div
+                class="inset-0 absolute flex flex-col translate-y-[90%] transiton-all duration-500 group-hover:translate-y-0 group-hover:pt-2">
+                <h1 class="text-center text-white">Nidan Hospital</h1>
+                <p
+                  class="text-center opacity-0 transition-opacity group-hover:opacity-100 text-white">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                  nulla labore inventore eaque dicta asperiores facere, fuga ipsam
+                  pariatur accusantium iusto necessitatibus vero odit voluptatibus.
+                  Itaque, dignissimos. Nemo, tenetur voluptates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--Testimonials-->
+      <section>
+        <div class="mx-auto max-w-screen-xl px-4 mt-24 sm:px-6 lg:px-8">
+            <h1 class="font-bold text-3xl md:text-4xl mt-2 text-center" id="about_us">
+                <span class="text-svg-color">TESTIMONIALS</span>
+              </h1>
+              <div class="mt-2 flex justify-center items-center">
+                <hr
+                  class="w-64 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out delay-200" />
+              </div>
+              <p class="font-semibold text-center italic mt-10">Don't just take our word for it... Read reviews from our customers</p>
+          <div class="swiper-container !overflow-hidden mt-14">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote class="bg-gray-100 p-8">
+                  <div class="flex items-center">
+                    <img
+                      alt="Dog"
+                      src="../png_images/dummy-man.png"
+                      class="h-16 w-16 rounded-full object-cover"
+                    />
+      
+                    <div class="ml-4 text-sm">
+                      <p class="font-bold text-lg">Mr. XYZ Maharjan</p>
+                      <p class="mt-1  font-semibold">Head of Prime</p>
+                    </div>
+                  </div>
+      
+                  <p class="relative mt-4 text-svg-color italic font-semibold">
+                    <span class="text-xl">&ldquo;</span>
+      
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    assumenda officiis sit amet itaque eveniet accusantium corporis
+                    tempora, soluta perspiciatis rerum, ratione animi nemo inventore
+                    repellat, commodi in esse quisquam.
+      
+                    <span class="text-xl">&rdquo;</span>
+                  </p>
+                </blockquote>
+              </div>
+      
+              <div class="swiper-slide">
+                <blockquote class="bg-gray-100 p-8">
+                  <div class="flex items-center">
+                    <img
+                      alt="Dog"
+                      src="../png_images/dummy-man.png"
+                      class="h-16 w-16 rounded-full object-cover"
+                    />
+      
+                    <div class="ml-4 text-sm">
+                      <p class="font-bold text-lg">Mr. XYZ Maharjan</p>
+                      <p class="mt-1 font-semibold">Head of Prime</p>
+                    </div>
+                  </div>
+      
+                  <p class="relative mt-4 text-svg-color italic font-semibold">
+                    <span class="text-xl">&ldquo;</span>
+      
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    assumenda officiis sit amet itaque eveniet accusantium corporis
+                    tempora, soluta perspiciatis rerum, ratione animi nemo inventore
+                    repellat, commodi in esse quisquam.
+      
+                    <span class="text-xl">&rdquo;</span>
+                  </p>
+                </blockquote>
+              </div>
+      
+              <div class="swiper-slide">
+                <blockquote class="bg-gray-100 p-8">
+                  <div class="flex items-center">
+                    <img
+                      alt="Dog"
+                      src="../png_images/dummy-man.png"
+                      class="h-16 w-16 rounded-full object-cover"
+                    />
+      
+                    <div class="ml-4 text-sm">
+                      <p class="font-bold text-lg">Mr. XYZ Maharjan</p>
+                      <p class="mt-1 font-semibold">Head of Prime</p>
+                    </div>
+                  </div>
+      
+                  <p class="relative mt-4 text-svg-color italic font-semibold">
+                    <span class="text-xl">&ldquo;</span>
+      
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    assumenda officiis sit amet itaque eveniet accusantium corporis
+                    tempora, soluta perspiciatis rerum, ratione animi nemo inventore
+                    repellat, commodi in esse quisquam.
+      
+                    <span class="text-xl">&rdquo;</span>
+                  </p>
+                </blockquote>
+              </div>
+      
+              <div class="swiper-slide">
+                <blockquote class="bg-gray-100 p-8">
+                  <div class="flex items-center">
+                    <img
+                      alt="Dog"
+                      src="../png_images/dummy-man.png"
+                      class="h-16 w-16 rounded-full object-cover"
+                    />
+      
+                    <div class="ml-4 text-sm">
+                      <p class="font-bold text-lg">Mr. XYZ Maharjan</p>
+                      <p class="mt-1 font-semibold">Head of Prime</p>
+                    </div>
+                  </div>
+      
+                  <p class="relative mt-4 text-svg-color italic font-semibold">
+                    <span class="text-xl">&ldquo;</span>
+      
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                    assumenda officiis sit amet itaque eveniet accusantium corporis
+                    tempora, soluta perspiciatis rerum, ratione animi nemo inventore
+                    repellat, commodi in esse quisquam.
+      
+                    <span class="text-xl">&rdquo;</span>
+                  </p>
+                </blockquote>
+              </div>
+
+            </div>
+      
+            <div class="swiper-pagination !relative !bottom-0 mt-12"></div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 8,
+            autoplay: {
+              delay: 8000,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            breakpoints: {
+              640: {
+                slidesPerView: 1.5,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            },
+          })
+        })
+      </script>
+
+      <!--Contact form-->
+    <div class=" flex flex-col items-center pb-5 mt-10" id="contact">
+        <h1 class="font-bold text-4xl mt-16 text-svg-color ">GET IN TOUCH</h1>
+        <hr
+            class="w-72 h-1 bg-red-500 hover:scale-x-150 transition ease-in-out" />
+        <p class="container mx-auto text-center text-base mt-10 px-4 italic w-3/4 font-semibold">
+          Ready to start a project or really curious about our process? Big or
+          small, we have a solution thats right for you. Let’s talk about your
+          idea! Drop us a note, give us a call; we're happy to answer all your
+          questions.
+        </p>
+        <form
+          action=""
+          class=" mt-14 flex flex-col  w-72 md:w-2/3 lg:w-1/2 text-black items-center border-4 rounded-3xl  border-svg-color shadow-sm shadow-svgbg-svg-color  border-t-0 border-l-0  gap-y-2 p-5 px-2  backdrop-blur-sm bg-white/50">
+          <div class="space-y-2 md:flex md:gap-10 items-center">
+              <input type="text" name="" id=""  class="border border-black p-2 font-semibold pl-2 rounded-md  placeholder-black " placeholder="Name" />
+              <input type="email" name="" id=""  class="border border-black p-2 font-semibold pl-2 rounded-md  placeholder-black" placeholder="Email"  />
+          </div>
+          <div class="md:flex space-y-2 md:gap-10 items-center ">
+              <input type="text" name="" id=""  class="border border-black p-2 font-semibold pl-2 rounded-md  placeholder-black" placeholder="Company"  />
+              <input type="text" name="" id=""  class="border border-black p-2 font-semibold pl-2 rounded-md   placeholder-black" placeholder="Subject"  />
+          </div>
+          <div>
+              <textarea
+                name=""
+                id=""
+                cols="50"
+                rows="5"
+                class="border border-gray-500 p-1 font-semibold pl-2 w-full placeholder-black" placeholder="Message" ></textarea>
+          </div>
+          <button type="submit" value="" class="text-lg p-2 px-4 bg-svg-color text-white font-bold rounded-md font-mono">SUBMIT</button>
+        </form>
+      </div>
+  
+      <!--FOOTER-->
+      <div>
+        <!-- Footer -->
+        <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #2252C5">
+          <!-- Grid container -->
+          <div class="container mx-auto sm:px-4 p-6 pb-4">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="flex flex-wrap">
+                <!-- Grid column -->
+                <div class="md:w-1/4 pr-4 pl-4 lg:w-1/4 xl:w-1/4 mx-auto mt-3">
+                  <h6 class="uppercase mb-4 font-bold">iClick</h6>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    eluisossilibero, numquam cumque. Suscipit consequatur facere
+                    repellat?
+                  </p>
+                </div>
+                <!-- Grid column -->
+  
+                <hr class="w-full clearfix md:hidden" />
+  
+                <!-- Grid column -->
+                <div class="md:w-1/5 pr-4 pl-4 lg:w-1/5 xl:w-1/5 mx-auto mt-3">
+                  <h6 class="uppercase mb-4 font-bold">LINKS</h6>
+                  <p>
+                    <a class="text-white">About Us</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Services</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Process</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Latest Works</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+  
+                <hr class="w-full clearfix md:hidden" />
+  
+                <!-- Grid column -->
+                <hr class="w-full clearfix md:hidden" />
+  
+                <!-- Grid column -->
+                <div class="md:w-1/3 pr-4 pl-4 lg:w-1/4 xl:w-1/4 mx-auto mt-3">
+                  <h6 class="uppercase mb-4 font-bold">Contact</h6>
+                  <p><i class="fas fa-home mr-3"></i> Dallu, KTM, Nepal</p>
+                  <p><i class="fas fa-envelope mr-3"></i> iClick@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+  
+                <!-- Grid column -->
+                <div class="md:w-1/4 pr-4 pl-4 lg:w-1/5 xl:w-1/5 mx-auto mt-3">
+                  <h6 class="uppercase mb-4 font-bold">Follow us</h6>
+  
+                  <!-- Facebook -->
+                  <a
+                    class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 btn-floating m-1 hover:scale-110"
+                    style="background-color: #3b5998"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+  
+  
+                  <!-- Linkedin -->
+                  <a
+                    class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 btn-floating m-1 hover:scale-110"
+                    style="background-color: #0082ca"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <!-- Github -->
+                  <!-- <a
+                    class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue-600 text-white hover:bg-blue-600 btn-floating m-1 hover:scale-110"
+                    style="background-color: #333333"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-github"></i
+                  ></a> -->
+                </div>
+              </div>
+              <!--Grid row-->
+            </section>
+          </div>
+  
+          <!-- Copyright -->
+          <div class="text-center font-semibold p-6 bg-svg-color">
+            © 2020 Copyright:
+            <a class="text-white" href="https://iClick.com/">iClick Pvt Ltd</a>
+          </div>
+  
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </div>
+   
+</body>
+</html>
