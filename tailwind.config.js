@@ -1,19 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/**/*.{html,js,php}"],
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        "footer-color": "#929fba",
-        "svg-color": "#2252C5",
-      },
-
-      screens: {
-        mde: "850px",
-      },
-
-      
+        "primary":"#305A30",
+        "secondary":"#006460",
+        "heading":"#121F38",
+        "paragraph":"#616161"
+        }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
