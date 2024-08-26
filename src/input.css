@@ -4,21 +4,10 @@
 
 @layer base{
    
-    /* our services */
-    .services_css{
-        @apply h-44 md:h-48 bg-white border-2 border-solid p-3 shadow-md shadow-blue-600/50 hover:scale-105 transition
+    /* smooth hover underline effect */
+    .nav-item{
+        @apply no-underline text-black hover:text-primary transform ease-in-out duration-150;
         
     }
-    
-    /* our recent works */
-    .recent_project{
-        @apply 
-        h-52 w-40 md:h-72 md:w-60  cursor-pointer shadow-md shadow-gray-600 overflow-hidden relative transition-shadow hover:shadow-md hover:shadow-black
-        
-    }
-
-
-
-    
 }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tranquility-Services</title>
+    <title>Tranquility-Packages</title>
 
     <!-- link -->
     <link rel="stylesheet" href="../public/css/output.css" />
@@ -20,7 +20,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body class="font-dm-sans flex flex-col h-screen">
+  <body class="font-dm-sans flex flex-col h-screen w-full">
     <!-- navbar begins -->
     <header class="w-full">
       <div
@@ -85,58 +85,46 @@
             id="navbar_content"
             class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
           >
-          <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
-            <li class="px-1">
-              <a href="/src/services.html" class="nav-item"
-                >SERVICES</a
+            <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
+              <li class="px-1">
+                <a href="/src/services.html" class="nav-item">SERVICES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/packages.html" class="nav-item">PACKAGES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/memberships.html" class="nav-item">MEMBERSHIP</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/about.html" class="nav-item">ABOUT</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/contact.html" class="nav-item">CONTACT</a>
+              </li>
+            </ul>
+            <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+              <a
+                href="/src/book_now.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/packages.html" class="nav-item"
-                >PACKAGES</a
+                <ion-icon name="calendar-outline"></ion-icon>
+                <h5 class="font-medium text-sm">Book Now</h5>
+              </a>
+              <a
+                href="/src/download_app.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/memberships.html" class="nav-item"
-                >MEMBERSHIP</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/about.html" class="nav-item"
-                >ABOUT</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/outlets.html" class="nav-item"
-                >OUTLETS</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/contact.html" class="nav-item"
-                >CONTACT</a
-              >
-            </li>
-          </ul>
-          <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
-            <a
-              href="/src/book_now.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
-            >
-              <ion-icon name="calendar-outline"></ion-icon>
-              <h5 class="font-medium text-sm">Book Now</h5>
-            </a>
-            <a
-              href="/src/download_app.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
-            >
-              <img
-                src="/public/images/play-store-icon.png"
-                alt=""
-                class="h-4"
-              />
-              <h5 class="font-medium text-sm">Download App</h5>
-            </a>
-          </div>
+                <img
+                  src="/public/images/play-store-icon.png"
+                  alt=""
+                  class="h-4"
+                />
+                <h5 class="font-medium text-sm">Download App</h5>
+              </a>
+            </div>
           </div>
           <span class="lg:hidden p-5">
             <ion-icon
@@ -147,7 +135,7 @@
           </span>
         </div>
       </div>
-      
+
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -178,14 +166,10 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
                   <li class="px-1">
-                    <a href="/src/services.html" class="nav-item"
-                      >SERVICES</a
-                    >
+                    <a href="/src/services.html" class="nav-item">SERVICES</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/packages.html" class="nav-item"
-                      >PACKAGES</a
-                    >
+                    <a href="/src/packages.html" class="nav-item">PACKAGES</a>
                   </li>
                   <li class="px-1">
                     <a href="/src/memberships.html" class="nav-item"
@@ -193,22 +177,18 @@
                     >
                   </li>
                   <li class="px-1">
-                    <a href="/src/about.html" class="nav-item"
-                      >ABOUT</a
-                    >
+                    <a href="/src/about.html" class="nav-item">ABOUT</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/outlets.html" class="nav-item"
-                      >OUTLETS</a
-                    >
+                    <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/contact.html" class="nav-item"
-                      >CONTACT</a
-                    >
+                    <a href="/src/contact.html" class="nav-item">CONTACT</a>
                   </li>
                 </ul>
-                <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+                <div
+                  class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
+                >
                   <a
                     href="/src/book_now.html"
                     class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
@@ -247,110 +227,104 @@
     </header>
     <!-- navbar ends  -->
 
-    <main class="px-5 md:px-10 2xl:px-20 py-10 flex-grow">
-      <div
-        class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
-      >
-        <h1 class="font-medium">OUR SERVICES</h1>
-        <h1 class="mt-2 font-medium">SOALTEE HOTEL</h1>
-        <img
-          src="/public/images/fancy-border-line.png"
-          alt=""
-          class="w-[290px] md:w-96"
-        />
-      </div>
-
-      <!-- types of services  -->
-      <div
-        id="service-button-lists"
-        class="mt-10 flex justify-start md:justify-center overflow-x-auto md:flex-wrap gap-x-2 md:gap-x-5"
-      >
-        <script>
-          const serviceLists = [
-            "Signature Massage",
-            "Relaxation Massage",
-            "Theraputic Massage",
-            "Mini Massage",
-            "Spa Package",
-            "Theraputic Massage",
-            "Mini Massage",
-            "Spa Package",
-            "Theraputic Massage",
-          ];
-
-          const serviceButtonListsContent = serviceLists
-            .map(
-              (service) => `
-        <button class="cursor-pointer text-xs md:text-base px-3 py-2 font-medium bg-white border-none hover:text-primary duration-150 transform ease-in-out">${service}</button>`
-            )
-            .join("");
-
-          document.getElementById("service-button-lists").innerHTML =
-            serviceButtonListsContent;
-        </script>
-      </div>
-
-      <!-- service lists  -->
-      <div
-        id="service-lists"
-        class="mt-10 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5"
-      >
-        <script>
-          const services = [
-            {
-              name: "Tranquility Signature Massage",
-              price: 6000,
-            },
-            {
-              name: "Hot Stone Therapy",
-              price: 6000,
-            },
-            {
-              name: "Head And Shoulder Massage",
-              price: 6000,
-            },
-            {
-              name: "Tranquility Signature Massage",
-              price: 6000,
-            },
-            {
-              name: "Hot Stone Therapy",
-              price: 6000,
-            },
-            {
-              name: "Head And Shoulder Massage",
-              price: 6000,
-            },
-          ];
-
-          const serviceListsContent = services
-            .map(
-              (service, index) => `
-                      <div>
-          <img src="/public/mock-images/services/service-${
-            index + 1
-          }.png" alt="" class="h-[145px] sm:h-[245px] md:h-[200px] xl:h-[245px] w-full object-cover">
-          <div class="flex flex-col gap-1 mt-2">
-            <a href="#" class="text-sm md:text-base xl:text-lg text-black no-underline hover:underline font-medium line-clamp-1 transform duration-150 ease-in-out">${
-              service.name
-            }</a>
-            <h5 class="font-medium text-paragraph text-xs md:text-sm">Starting From Rs ${
-              service.price
-            }/-</h5>
+    <main class="px-5 md:px-10 2xl:px-20 py-10 flex-grow w-full">
+      <div class="flex flex-col md:flex-row gap-5">
+        <div class="w-full md:w-3/4">
+          <div class="h-[350px] w-full bg-gray-100"></div>
+          <div class="mt-5 flex flex-col gap-2">
+            <h2 class="font-marcellus font-medium">Ayurvedic Package</h2>
+            <p class="text-paragraph text-justify">
+              Discover Ayurvedic bliss with our holistic packages. Relax with a
+              Head and Shoulder Massage, experience Dhara's therapeutic
+              benefits, and revitalize through Reflexology, all in one
+              rejuvenating journey to wellness.
+            </p>
+            <div class="flex flex-col bg-light-blue">
+              <div
+                class="font-marcellus p-5 flex justify-between items-center border-b-2 border-solid border-white"
+              >
+                <h3 class="font-medium">Package</h3>
+                <h3 class="font-medium">
+                  <span>90 min</span>&nbsp;|&nbsp;<span>Rs 6999/-</span>
+                </h3>
+              </div>
+              <div class="p-5 flex flex-col gap-3">
+                <h4 class="font-medium text-paragraph">
+                  Head and Shoulder Massage : 30 Min
+                </h4>
+                <h4 class="font-medium">Dhara : 30 Min</h4>
+                <h4 class="font-medium">Reflexology : 30 Min</h4>
+              </div>
+            </div>
+            <div class="flex flex-col bg-light-blue">
+              <div
+                class="font-marcellus p-5 flex justify-between items-center border-b-2 border-solid border-white"
+              >
+                <h3 class="font-medium">Package</h3>
+                <h3 class="font-medium">
+                  <span>90 min</span>&nbsp;|&nbsp;<span>Rs 6999/-</span>
+                </h3>
+              </div>
+              <div class="p-5 flex flex-col gap-3">
+                <h4 class="font-medium text-paragraph">
+                  Head and Shoulder Massage : 30 Min
+                </h4>
+                <h4 class="font-medium">Dhara : 30 Min</h4>
+                <h4 class="font-medium">Reflexology : 30 Min</h4>
+              </div>
+            </div>
           </div>
         </div>
-       `
-            )
-            .join("");
+        <div class="w-full md:w-1/4 px-5">
+          <h2 class="mb-5 font-marcellus font-medium">Other Packages</h2>
+          <div id="package-lists" class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1 gap-5">
+              <script>
+            const packages = [
+              {
+                name: "Tranquility Half-Day Package",
+                price: 6000,
+              },
+              {
+                name: "Ayurvedic Package",
+                price: 6000,
+              },
+              {
+                name: "Men’s Special Package",
+                price: 6000,
+              },
+            ];
 
-          document.getElementById("service-lists").innerHTML =
-            serviceListsContent;
-        </script>
+            const packageListsContent = packages
+              .map(
+                (package, index) => `
+                        <div>
+            <img src="/public/mock-images/packages/package-${
+              index + 1
+            }.png" alt="" class="h-[145px] 2xl:h-[200px] w-full object-cover">
+            <div class="flex flex-col gap-1 mt-2">
+              <a  href="#" class="text-sm md:text-base text-black no-underline hover:underline font-medium line-clamp-1 transform duration-150 ease-in-out">${
+                package.name
+              }</a>
+              <h5 class="font-medium text-paragraph text-xs ">Starting From Rs ${
+                package.price
+              }/-</h5>
+              <button class="w-max mt-1 text-xs cursor-pointer bg-white hover:bg-primary p-2 rounded-sm text-primary hover:text-white font-semibold flex items-center gap-2 border-1 border-solid border-gray-400 hover:border-primary transform duration-150 ease-in-out">DETAILS <ion-icon name="arrow-forward-outline"></ion-icon></button>
+            </div>
+          </div>
+         `
+              )
+              .join("");
+
+            document.getElementById("package-lists").innerHTML =
+              packageListsContent;
+          </script>
+          </div>
+        </div>
       </div>
     </main>
 
     <!-- footer begins  -->
-    <div id="footer_services"></div>
+    <div id="footer_package_description"></div>
     <!-- footer ends  -->
   </body>
 </html>

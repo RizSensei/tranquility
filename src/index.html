@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquility-Home</title>
-
     <!-- link -->
-    <link rel="stylesheet" href="../public/css/output.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
-    <link rel="stylesheet" href="../public/css/font.css" />
+    <link rel="stylesheet" href="/public/css/output.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+
+    <script defer src="/public/js/fetch.js"></script>
+    <script defer src="/public/js/script.js"></script>
 
     <script
       type="module"
@@ -20,78 +21,114 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body class="font-dm-sans">
-    <!-- topbar with navbar  -->
+  <body class="font-dm-sans flex flex-col h-screen">
+    <!-- navbar begins -->
     <header class="w-full">
-      <div class="font-marcellus flex text-white bg-secondary">
-        <div class="py-5 pl-20 pr-10 flex flex-col justify-center">
-          <h4 class="font-medium">MONSOON MASSAGE PACKAGES</h4>
+      <div
+        class="font-marcellus text-sm md:text-base flex flex-col md:flex-row text-white bg-secondary"
+      >
+        <div
+          class="py-2 md:py-5 md:pl-20 md:pr-10 flex flex-col items-center justify-center"
+        >
+          <a href="./packages.html" class="no-underline text-white">
+            <h4 class="font-medium underline md:no-underline">
+              MONSOON MASSAGE PACKAGES
+            </h4>
+          </a>
         </div>
-        <div class="flex">
-          <div class="h-24 w-40">
-            <img
-              src="/public/mock-images/packages/package-4.png"
-              alt=""
-              class="h-full w-full object-cover"
-            />
+        <div class="hidden md:flex">
+          <div class="flex">
+            <div class="h-24 w-40">
+              <img
+                src="/public/mock-images/packages/package-4.png"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col justify-center gap-3 px-5">
+              <a href="" class="text-white smooth-anchor-transform">
+                <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
+              </a>
+              <h4 class="font-medium">RS 3000/-</h4>
+            </div>
           </div>
-          <div class="flex flex-col justify-center gap-3 px-5">
-            <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
-            <h4 class="font-medium">RS 3000/-</h4>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="h-24 w-40">
-            <img
-              src="/public/mock-images/packages/package-4.png"
-              alt=""
-              class="h-full w-full object-cover"
-            />
-          </div>
-          <div class="flex flex-col justify-center gap-3 px-5">
-            <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
-            <h4 class="font-medium">RS 3000/-</h4>
+          <div class="flex">
+            <div class="h-24 w-40">
+              <img
+                src="/public/mock-images/packages/package-4.png"
+                alt=""
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col justify-center gap-3 px-5">
+              <a href="" class="text-white smooth-anchor-transform">
+                <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
+              </a>
+              <h4 class="font-medium">RS 3000/-</h4>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="flex justify-between px-5 md:px-10 2xl:px-20 py-1">
-        <div class="h-28 w-40">
-          <img
-            src="/public/images/tranquility-logo.png"
-            alt=""
-            class="h-full w-full object-cover"
-          />
+        <div class="h-24 sm:h-28 w-32 sm:w-40">
+          <a href="./index.html">
+            <img
+              src="/public/images/tranquility-logo.png"
+              alt="Tranquility Logo"
+              class="h-full w-full object-cover"
+            />
+          </a>
         </div>
+
         <div class="flex flex-col justify-center">
-          <div class="flex gap-2 items-center">
-            <ul class="list-none flex divide-x divide-gray-400 gap-5 text-sm">
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">SERVICES</a>
-              </li>
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">PACKAGES</a>
-              </li>
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">MEMBERSHIP</a>
-              </li>
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">ABOUT</a>
-              </li>
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">OUTLETS</a>
-              </li>
-              <li class="px-1">
-                <a href="#" class="no-underline text-black">CONTACT</a>
-              </li>
-            </ul>
-            <button
-              class="cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
+          <div
+            id="navbar_content"
+            class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
+          >
+          <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
+            <li class="px-1">
+              <a href="/src/services.html" class="nav-item"
+                >SERVICES</a
+              >
+            </li>
+            <li class="px-1">
+              <a href="/src/packages.html" class="nav-item"
+                >PACKAGES</a
+              >
+            </li>
+            <li class="px-1">
+              <a href="/src/memberships.html" class="nav-item"
+                >MEMBERSHIP</a
+              >
+            </li>
+            <li class="px-1">
+              <a href="/src/about.html" class="nav-item"
+                >ABOUT</a
+              >
+            </li>
+            <li class="px-1">
+              <a href="/src/outlets.html" class="nav-item"
+                >OUTLETS</a
+              >
+            </li>
+            <li class="px-1">
+              <a href="/src/contact.html" class="nav-item"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+          <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+            <a
+              href="/src/book_now.html"
+              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
             >
               <ion-icon name="calendar-outline"></ion-icon>
               <h5 class="font-medium text-sm">Book Now</h5>
-            </button>
-            <button
-              class="cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
+            </a>
+            <a
+              href="/src/download_app.html"
+              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
             >
               <img
                 src="/public/images/play-store-icon.png"
@@ -99,12 +136,117 @@
                 class="h-4"
               />
               <h5 class="font-medium text-sm">Download App</h5>
-            </button>
+            </a>
+          </div>
+          </div>
+          <span class="lg:hidden p-5">
+            <ion-icon
+              id="open-mobile-nav"
+              name="menu-outline"
+              class="cursor-pointer"
+            ></ion-icon>
+          </span>
+        </div>
+      </div>
+      
+      <div class="lg:hidden">
+        <div
+          id="mobile-sidebar"
+          class="fixed top-0 z-[100] overflow-hidden h-screen w-full bg-black bg-opacity-50"
+        >
+          <div class="flex w-full h-full">
+            <div
+              class="h-full w-80 bg-white px-3 pt-3 pb-5 flex flex-col gap-5 overflow-y-auto"
+            >
+              <div class="flex justify-between items-center">
+                <a href="./index.html">
+                  <img
+                    src="/public/images/tranquility-logo.png"
+                    alt=""
+                    class="h-24 w-32"
+                  />
+                </a>
+                <button
+                  class="border-none bg-white cursor-pointer text-3xl text-red-500"
+                >
+                  <ion-icon
+                    id="close-mobile-nav"
+                    name="close-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+              <hr class="bg-primary w-full h-0.5" />
+              <div class="flex flex-col gap-5 justify-between">
+                <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
+                  <li class="px-1">
+                    <a href="/src/services.html" class="nav-item"
+                      >SERVICES</a
+                    >
+                  </li>
+                  <li class="px-1">
+                    <a href="/src/packages.html" class="nav-item"
+                      >PACKAGES</a
+                    >
+                  </li>
+                  <li class="px-1">
+                    <a href="/src/memberships.html" class="nav-item"
+                      >MEMBERSHIP</a
+                    >
+                  </li>
+                  <li class="px-1">
+                    <a href="/src/about.html" class="nav-item"
+                      >ABOUT</a
+                    >
+                  </li>
+                  <li class="px-1">
+                    <a href="/src/outlets.html" class="nav-item"
+                      >OUTLETS</a
+                    >
+                  </li>
+                  <li class="px-1">
+                    <a href="/src/contact.html" class="nav-item"
+                      >CONTACT</a
+                    >
+                  </li>
+                </ul>
+                <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+                  <a
+                    href="/src/book_now.html"
+                    class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
+                  >
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <h5 class="font-medium text-sm">Book Now</h5>
+                  </a>
+                  <a
+                    href="/src/download_app.html"
+                    class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
+                  >
+                    <img
+                      src="/public/images/play-store-icon.png"
+                      alt=""
+                      class="h-4"
+                    />
+                    <h5 class="font-medium text-sm">Download App</h5>
+                  </a>
+                </div>
+              </div>
+              <hr class="bg-primary w-full h-0.5" />
+              <div class="flex flex-col gap-2">
+                <legend class="font-marcellus text-xl">WE ARE ON SOCIAL</legend>
+                <div class="flex gap-3 text-xl text-primary">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <ion-icon name="logo-instagram"></ion-icon>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="flex-grow"></div>
           </div>
         </div>
       </div>
-      <div></div>
     </header>
+    <!-- navbar ends  -->
 
     <!-- video section -->
     <main class="h-[500px] w-full">
@@ -117,13 +259,17 @@
     </main>
 
     <!-- main content  -->
-    <div class="px-10 md:px-20 2xl:px-40 py-20">
-      <div class="grid grid-cols-2 gap-5">
-        <div class="flex justify-center">
-          <img src="/public/images/landing/landing-image.png" alt="" />
+    <div class="px-10 md:px-20 2xl:px-40 py-10 md:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
+        <div class="hidden md:flex justify-center h-[350px] xl:h-full">
+          <img
+            src="/public/images/landing/landing-image.png"
+            alt=""
+            class="h-full"
+          />
         </div>
         <div class="flex flex-col gap-5">
-          <h1 class="font-marcellus text-4xl font-medium">
+          <h1 class="font-marcellus text-3xl md:text-4xl font-medium">
             NEPAL’S LARGEST CHAIN OF
             <span class="bg-[#B0CFBE] text-white rounded-sm px-3 py-0.5"
               >SPA</span
@@ -183,92 +329,8 @@
       </div>
     </div>
 
-    <!-- footer  -->
-    <footer class="w-full bg-primary text-white">
-      <div
-        class="py-10 border-b-2 border-solid border-b-white/30 border-x-0 border-t-0"
-      >
-        <div
-          class="container mx-auto flex flex-col sm:flex-row gap-5 justify-between"
-        >
-          <!-- tranquility logo and slogan -->
-          <div class="flex flex-col gap-2 items-center justify-center">
-            <img src="/public/images/tranquility-logo-footer.png" alt="" />
-            <h4 class="font-semibold">BALANCING BODY, MIND AND SPIRIT</h4>
-          </div>
-
-          <!-- important links, contact us, follow us on  -->
-          <div class="grid grid-cols-2 xl:grid-cols-3 px-10 gap-10">
-            <div class="flex flex-col gap-5">
-              <legend class="text-lg">Important Links</legend>
-              <ul class="list-none flex flex-col gap-4 text-sm">
-                <li>
-                  <a href="#" class="no-underline text-white">Services</a>
-                </li>
-                <li>
-                  <a href="#" class="no-underline text-white">About Us</a>
-                </li>
-                <li><a href="#" class="no-underline text-white">Outlets</a></li>
-                <li><a href="#" class="no-underline text-white">Contact</a></li>
-                <li>
-                  <a href="#" class="no-underline text-white"
-                    >Privacy & Policy</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="no-underline text-white"
-                    >Terms & Conditions</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col gap-5">
-              <legend class="text-lg">Contact Us</legend>
-              <ul class="list-none flex flex-col gap-4 text-xl">
-                <li class="flex flex-wrap gap-2 items-center">
-                  <ion-icon name="location-outline"></ion-icon
-                  ><span class="text-sm">Lazimpat,Kathmandu</span>
-                </li>
-                <li class="flex flex-wrap gap-2 items-center">
-                  <ion-icon name="call-outline"></ion-icon
-                  ><span class="text-sm">+977-9802021286</span>
-                </li>
-              </ul>
-            </div>
-            <div class="flex flex-col gap-5">
-              <legend class="text-lg">Folllow Us On</legend>
-              <div class="flex gap-3 text-xl">
-                <ion-icon name="logo-linkedin"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-            </div>
-          </div>
-
-          <!-- tranquility qr with google play button  -->
-          <div class="flex flex-col gap-2 items-center justify-center">
-            <div class="p-0.5 rounded-sm bg-white h-32 aspect-square">
-              <img
-                src="/public/images/tranquility-QR.png"
-                alt=""
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <h6 class="font-medium text-xs">Scan to download App</h6>
-            <img
-              src="/public/images/Google-play.png"
-              alt=""
-              class="h-20 w-full object-scale-down"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="w-full py-2 text-center">
-        <h4 class="font-medium">
-          Copyright &copy; Tranquility Spa - All Rights Reserved
-        </h4>
-      </div>
-    </footer>
+    <!-- footer begins  -->
+    <div id="footer_index"></div>
+    <!-- footer ends  -->
   </body>
 </html>

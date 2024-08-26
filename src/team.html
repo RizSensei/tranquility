@@ -9,7 +9,6 @@
     <!-- link -->
     <link rel="stylesheet" href="../public/css/output.css" />
     <link rel="stylesheet" href="../public/css/style.css" />
-
     <script defer src="/public/js/fetch.js"></script>
     <script defer src="/public/js/script.js"></script>
 
@@ -250,10 +249,11 @@
     <!-- navbar ends  -->
 
     <main class="px-10 md:px-20 2xl:px-40 py-10 flex-grow">
+      <!-- team heading  -->
       <div
         class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
       >
-        <h1 class="font-medium w-full text-center">ABOUT TRANQUILITY</h1>
+        <h1 class="font-medium mb-2">MEET OUR TEAM</h1>
         <img
           src="/public/images/fancy-border-line.png"
           alt=""
@@ -261,132 +261,60 @@
         />
       </div>
 
+      <!-- team content  -->
+      <!-- package lists  -->
       <div
-        class="mt-10 text-center flex justify-center overflow-y-auto gap-x-2 md:gap-x-5 text-xs md:text-base"
+        id="team-lists"
+        class="mt-12 md:mt-24 grid grid-cols-2 xl:grid-cols-4 gap-2"
       >
-        <a href="" class="w-max text-black no-underline"
-          >Welcome to Tranquility</a
-        >
-        <a href="" class="w-max text-black no-underline">History</a>
-        <a href="" class="w-max text-black no-underline"
-          >Story & Vision</a
-        >
-        <a href="" class="w-max text-black no-underline"
-          >Team Members</a
-        >
-      </div>
+        <script>
+          const teams = [
+            {
+              name: "Rosalina D. William",
+              designation: "Sr Massage Specialist",
+            },
+            {
+              name: "Rosalina D. William",
+              designation: "Sr Massage Specialist",
+            },
+            {
+              name: "Rosalina D. William",
+              designation: "Sr Massage Specialist",
+            },
+            {
+              name: "Rosalina D. William",
+              designation: "Sr Massage Specialist",
+            },
+          ];
 
-      <div
-        class="mt-10 h-[300px] md:h-[500px] w-full border border-solid border-gray-200"
-      >
-        <!-- <img src="/public/images/tranquility-about.png" alt="" class="h-full w-full object-cover"> -->
-      </div>
-
-      <div class="mt-10 flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-          <h2 class="font-marcellus">WELCOME TO TRANQUILITY SPA</h2>
-          <p class="text-paragraph text-justify">
-            Established in 2008, the Tranquility Spa has become the leader in
-            Spa and wellness industry with numerous outlets in different cities
-            and luxury hotels in Nepal and abroad. We are the first Day Spa to
-            be established in Nepal and recognized by Nepal Tourism Board and we
-            are also the first Nepalese brand to expand its service in the
-            international market. Our chain of spas are managed by experienced
-            and professional experts educated in renowned institute in Thailand,
-            Switzerland, UAE, Australia and Kerala, India with a proven history
-            in providing an excellent service at Marriott Putrajaya, Palm Garden
-            Hotel Malaysia, Mirage Lords Inn, Le Meridien, Hyatt, Radisson,
-            Shangri~La and Intercontinental Hotel Group. We are well equipped
-            with state-of-art technology and provide a peaceful environment to
-            soothe away your stress, pain, anxiety and Rejuvenate Mind, Body &
-            Spirit. Our services are centrally located and a perfect place for
-            you to beautify yourself with our beauty treatments.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-5">
-          <h2 class="font-marcellus">HISTORY</h2>
-
-          <div id="history" class="flex flex-col gap-5 sm:gap-1">
-            <script>
-              const years = [2020, 2021, 2022, 2023];
-
-              const historyContents = years
-                .map(
-                  (year) => `
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-10">
-            <div
-              class="pr-10 w-max border border-r-0 sm:border-r-2 border-solid border-y-0 border-l-0"
-            >
-              <div class="hexagon">
-                <div
-                  class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white"
-                >
-                  <h3>${year}</h3>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-col justify-center text-primary">
-              <p class="text-paragraph text-justify">
-                Lorem ipsum dolor sit amet consectetur. Et lobortis imperdiet aliquam libero venenatis ullamcorper augue ultricies. Suspendisse non cursus rhoncus id et. Id lobortis volutpat imperdiet diam feugiat dictum sed. Eu proin nibh phasellus nunc cursus elit id.
-              </p>
-            </div>
-          </div>
-              `
-                )
-                .join("");
-
-              document.getElementById("history").innerHTML = historyContents;
-            </script>
+          const teamListsContent = teams
+            .map(
+              (team, index) => `
+                      <div class=" flex flex-col items-center"
+                     >
+          <img src="/public/mock-images/team/team-${
+            index + 1
+          }.png" alt="" class="h-[200px] md:h-[375px] w-full">
+          <div class="flex flex-col md:items-center md:gap-1 mt-2">
+            <h2 class="font-marcellus text-base md:text-3xl text-black no-underline font-medium line-clamp-1">${
+              team.name
+            }</a>
+            <h4 class="font-medium text-xs md:text-lg text-paragraph"> ${
+              team.designation
+            }</h5>
           </div>
         </div>
+       `
+            )
+            .join("");
 
-        <div class="flex flex-col gap-5">
-          <h2 class="font-marcellus">OUR STORY</h2>
-          <p class="text-paragraph text-justify">
-            Established in 2008, the Tranquility Spa has become the leader in
-            Spa and wellness industry with numerous outlets in different cities
-            and luxury hotels in Nepal and abroad. We are the first Day Spa to
-            be established in Nepal and recognized by Nepal Tourism Board and we
-            are also the first Nepalese brand to expand its service in the
-            international market. Our chain of spas are managed by experienced
-            and professional experts educated in renowned institute in Thailand,
-            Switzerland, UAE, Australia and Kerala, India with a proven history
-            in providing an excellent service at Marriott Putrajaya, Palm Garden
-            Hotel Malaysia, Mirage Lords Inn, Le Meridien, Hyatt, Radisson,
-            Shangri~La and Intercontinental Hotel Group. We are well equipped
-            with state-of-art technology and provide a peaceful environment to
-            soothe away your stress, pain, anxiety and Rejuvenate Mind, Body &
-            Spirit. Our services are centrally located and a perfect place for
-            you to beautify yourself with our beauty treatments.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-5">
-          <h2 class="font-marcellus">OUR VISION</h2>
-          <p class="text-paragraph text-justify">
-            Established in 2008, the Tranquility Spa has become the leader in
-            Spa and wellness industry with numerous outlets in different cities
-            and luxury hotels in Nepal and abroad. We are the first Day Spa to
-            be established in Nepal and recognized by Nepal Tourism Board and we
-            are also the first Nepalese brand to expand its service in the
-            international market. Our chain of spas are managed by experienced
-            and professional experts educated in renowned institute in Thailand,
-            Switzerland, UAE, Australia and Kerala, India with a proven history
-            in providing an excellent service at Marriott Putrajaya, Palm Garden
-            Hotel Malaysia, Mirage Lords Inn, Le Meridien, Hyatt, Radisson,
-            Shangri~La and Intercontinental Hotel Group. We are well equipped
-            with state-of-art technology and provide a peaceful environment to
-            soothe away your stress, pain, anxiety and Rejuvenate Mind, Body &
-            Spirit. Our services are centrally located and a perfect place for
-            you to beautify yourself with our beauty treatments.
-          </p>
-        </div>
+          document.getElementById("team-lists").innerHTML = teamListsContent;
+        </script>
       </div>
     </main>
 
     <!-- footer begins  -->
-    <div id="footer_about"></div>
+    <div id="footer_team"></div>
     <!-- footer ends  -->
   </body>
 </html>
