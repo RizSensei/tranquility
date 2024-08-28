@@ -12,3 +12,34 @@
           document.getElementById("mobile-sidebar").classList.remove("show");
       });
   }
+
+  const closeMobileNavBlankRight = document.getElementById("mobile-sidebar-right");
+  if (closeMobileNavBlankRight) {
+      closeMobileNavBlankRight.addEventListener("click", function () {
+          document.getElementById("mobile-sidebar").classList.remove("show");
+      });
+  }
+
+//   servicie button select effect 
+  const serviceButtons = document.querySelectorAll(".service-button");
+
+  serviceButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        serviceButtons.forEach(function (btn) {
+        btn.classList.remove("service-btn-active");
+      });
+      this.classList.add("service-btn-active");
+    });
+  });
+
+//   package button select effect 
+  const packageButtons = document.querySelectorAll(".package-button");
+
+  packageButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        packageButtons.forEach(function (btn) {
+        btn.classList.remove("package-btn-active");
+      });
+      this.classList.add("package-btn-active");
+    });
+  });

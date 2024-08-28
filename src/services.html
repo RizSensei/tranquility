@@ -247,7 +247,7 @@
     </header>
     <!-- navbar ends  -->
 
-    <main class="px-5 md:px-10 2xl:px-20 py-10 flex-grow">
+    <main class="px-5 md:px-10 2xl:px-20 py-5 flex-grow">
       <div
         class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
       >
@@ -263,7 +263,7 @@
       <!-- types of services  -->
       <div
         id="service-button-lists"
-        class="mt-10 flex justify-start md:justify-center overflow-x-auto md:flex-wrap gap-x-2 md:gap-x-5"
+        class="mt-10 flex justify-start md:justify-center overflow-x-auto md:flex-wrap "
       >
         <script>
           const serviceLists = [
@@ -281,7 +281,7 @@
           const serviceButtonListsContent = serviceLists
             .map(
               (service) => `
-        <button class="cursor-pointer text-xs md:text-base px-3 py-2 font-medium bg-white border-none hover:text-primary duration-150 transform ease-in-out">${service}</button>`
+        <button class="service-button cursor-pointer text-sm md:text-base px-3 py-2 font-medium bg-white border-none hover:bg-primary hover:text-white duration-300 transform ease-in-out">${service}</button>`
             )
             .join("");
 

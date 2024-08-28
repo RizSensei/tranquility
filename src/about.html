@@ -87,58 +87,46 @@
             id="navbar_content"
             class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
           >
-          <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
-            <li class="px-1">
-              <a href="/src/services.html" class="nav-item"
-                >SERVICES</a
+            <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
+              <li class="px-1">
+                <a href="/src/services.html" class="nav-item">SERVICES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/packages.html" class="nav-item">PACKAGES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/memberships.html" class="nav-item">MEMBERSHIP</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/about.html" class="nav-item">ABOUT</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/contact.html" class="nav-item">CONTACT</a>
+              </li>
+            </ul>
+            <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+              <a
+                href="/src/book_now.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/packages.html" class="nav-item"
-                >PACKAGES</a
+                <ion-icon name="calendar-outline"></ion-icon>
+                <h5 class="font-medium text-sm">Book Now</h5>
+              </a>
+              <a
+                href="/src/download_app.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/memberships.html" class="nav-item"
-                >MEMBERSHIP</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/about.html" class="nav-item"
-                >ABOUT</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/outlets.html" class="nav-item"
-                >OUTLETS</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/contact.html" class="nav-item"
-                >CONTACT</a
-              >
-            </li>
-          </ul>
-          <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
-            <a
-              href="/src/book_now.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
-            >
-              <ion-icon name="calendar-outline"></ion-icon>
-              <h5 class="font-medium text-sm">Book Now</h5>
-            </a>
-            <a
-              href="/src/download_app.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
-            >
-              <img
-                src="/public/images/play-store-icon.png"
-                alt=""
-                class="h-4"
-              />
-              <h5 class="font-medium text-sm">Download App</h5>
-            </a>
-          </div>
+                <img
+                  src="/public/images/play-store-icon.png"
+                  alt=""
+                  class="h-4"
+                />
+                <h5 class="font-medium text-sm">Download App</h5>
+              </a>
+            </div>
           </div>
           <span class="lg:hidden p-5">
             <ion-icon
@@ -149,7 +137,7 @@
           </span>
         </div>
       </div>
-      
+
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -180,14 +168,10 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
                   <li class="px-1">
-                    <a href="/src/services.html" class="nav-item"
-                      >SERVICES</a
-                    >
+                    <a href="/src/services.html" class="nav-item">SERVICES</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/packages.html" class="nav-item"
-                      >PACKAGES</a
-                    >
+                    <a href="/src/packages.html" class="nav-item">PACKAGES</a>
                   </li>
                   <li class="px-1">
                     <a href="/src/memberships.html" class="nav-item"
@@ -195,22 +179,18 @@
                     >
                   </li>
                   <li class="px-1">
-                    <a href="/src/about.html" class="nav-item"
-                      >ABOUT</a
-                    >
+                    <a href="/src/about.html" class="nav-item">ABOUT</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/outlets.html" class="nav-item"
-                      >OUTLETS</a
-                    >
+                    <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/contact.html" class="nav-item"
-                      >CONTACT</a
-                    >
+                    <a href="/src/contact.html" class="nav-item">CONTACT</a>
                   </li>
                 </ul>
-                <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+                <div
+                  class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
+                >
                   <a
                     href="/src/book_now.html"
                     class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
@@ -249,7 +229,7 @@
     </header>
     <!-- navbar ends  -->
 
-    <main class="px-10 md:px-20 2xl:px-40 py-10 flex-grow">
+    <main class="px-10 md:px-20 2xl:px-40 py-5 flex-grow">
       <div
         class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
       >
@@ -261,29 +241,25 @@
         />
       </div>
 
-      <div
-        class="mt-10 text-center flex justify-center overflow-y-auto gap-x-2 md:gap-x-5 text-xs md:text-base"
-      >
-        <a href="" class="w-max text-black no-underline"
-          >Welcome to Tranquility</a
+      <div class="sticky top-0 z-20 w-full bg-white">
+        <div
+          class="py-3 text-center flex justify-center overflow-y-auto gap-x-2 md:gap-x-5 text-sm md:text-base"
         >
-        <a href="" class="w-max text-black no-underline">History</a>
-        <a href="" class="w-max text-black no-underline"
-          >Story & Vision</a
-        >
-        <a href="" class="w-max text-black no-underline"
-          >Team Members</a
-        >
+          <a href="#welcome" class="w-max nav-item">Welcome to Tranquility</a>
+          <a href="#history" class="w-max nav-item">History</a>
+          <a href="#story-and-vision" class="w-max nav-item">Story & Vision</a>
+          <a href="#team-members" class="w-max nav-item">Team Members</a>
+        </div>
       </div>
 
       <div
-        class="mt-10 h-[300px] md:h-[500px] w-full border border-solid border-gray-200"
+        class="h-[300px] md:h-[500px] w-full border border-solid border-gray-200"
       >
         <!-- <img src="/public/images/tranquility-about.png" alt="" class="h-full w-full object-cover"> -->
       </div>
 
-      <div class="mt-10 flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
+      <div class="flex flex-col">
+        <div id="welcome" class="pt-16 flex flex-col gap-5">
           <h2 class="font-marcellus">WELCOME TO TRANQUILITY SPA</h2>
           <p class="text-paragraph text-justify">
             Established in 2008, the Tranquility Spa has become the leader in
@@ -304,10 +280,10 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-5">
+        <div id="history" class="pt-16 flex flex-col gap-5">
           <h2 class="font-marcellus">HISTORY</h2>
 
-          <div id="history" class="flex flex-col gap-5 sm:gap-1">
+          <div id="history-content" class="flex flex-col gap-5 sm:gap-1">
             <script>
               const years = [2020, 2021, 2022, 2023];
 
@@ -336,12 +312,13 @@
                 )
                 .join("");
 
-              document.getElementById("history").innerHTML = historyContents;
+              document.getElementById("history-content").innerHTML =
+                historyContents;
             </script>
           </div>
         </div>
 
-        <div class="flex flex-col gap-5">
+        <div id="story-and-vision" class="pt-16 flex flex-col gap-5">
           <h2 class="font-marcellus">OUR STORY</h2>
           <p class="text-paragraph text-justify">
             Established in 2008, the Tranquility Spa has become the leader in
@@ -362,7 +339,7 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-5">
+        <div class="pt-16 flex flex-col gap-5">
           <h2 class="font-marcellus">OUR VISION</h2>
           <p class="text-paragraph text-justify">
             Established in 2008, the Tranquility Spa has become the leader in

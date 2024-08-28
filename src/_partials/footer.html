@@ -1,82 +1,98 @@
-<!-- footer  -->
 <footer class="w-full bg-primary text-white">
-  <div
-    class="py-10 border-b-2 border-solid border-b-white/30 border-x-0 border-t-0"
-  >
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!--Grid-->
     <div
-      class="container mx-auto px-5 flex flex-col sm:flex-row gap-5 justify-between"
+      class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 gap-y-8 pt-10 max-w-sm mx-auto sm:max-w-3xl lg:max-w-full"
     >
-      <!-- tranquility logo and slogan -->
-      <div class="flex flex-col gap-2 sm:items-center justify-center px-10">
-        <a href="../index.html">
+      <div class="col-span-full lg:col-span-2">
+        <a href="./index.html" class="flex justify-center lg:justify-start">
           <img
             src="/public/images/tranquility-logo-footer.png"
             alt=""
-            class="h-40 sm:h-52"
+            class="h-40"
           />
         </a>
-        <h4 class="font-semibold">BALANCING BODY, MIND AND SPIRIT</h4>
+        <p
+          class="py-5 text-sm font-semibold lg:max-w-xs text-center lg:text-left"
+        >
+          BALANCING BODY, MIND AND SPIRIT
+        </p>
       </div>
 
-      <!-- important links, contact us, follow us on  -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 px-10 gap-10">
-        <div class="flex flex-col gap-5">
-          <legend class="text-lg">Important Links</legend>
-          <ul class="list-none flex flex-col gap-4 text-sm">
-            <li>
-              <a href="../services.html" class="no-underline text-white"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a href="../about.html" class="no-underline text-white"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a href="../outlets.html" class="no-underline text-white"
-                >Outlets</a
-              >
-            </li>
-            <li>
-              <a href="../contact.html" class="no-underline text-white"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a href="#" class="no-underline text-white">Privacy & Policy</a>
-            </li>
-            <li>
-              <a href="#" class="no-underline text-white">Terms & Conditions</a>
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-5">
-          <legend class="text-lg">Contact Us</legend>
-          <ul class="list-none flex flex-col gap-4 text-xl">
-            <li class="flex flex-wrap gap-2 items-center">
-              <ion-icon name="location-outline"></ion-icon
-              ><span class="text-sm">Lazimpat,Kathmandu</span>
-            </li>
-            <li class="flex flex-wrap gap-2 items-center">
-              <ion-icon name="call-outline"></ion-icon
-              ><span class="text-sm">+977-9802021286</span>
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-5">
-          <legend class="text-lg">Folllow Us On</legend>
-          <div class="flex gap-3 text-xl">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            <ion-icon name="logo-instagram"></ion-icon>
-            <ion-icon name="logo-facebook"></ion-icon>
-            <ion-icon name="mail-outline"></ion-icon>
-          </div>
-        </div>
+      <!--End Col-->
+      <div class="lg:mx-auto text-left">
+        <h4 class="text-lg text-white font-semibold mb-7">
+          Important Links
+        </h4>
+        <ul
+          class="list-none text-base flex flex-col gap-3 transition-all duration-500"
+        >
+          <li>
+            <a href="./services.html" class="text-white no-underline"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="./packages.html" class="text-white no-underline"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a href="./outlets.html" class="text-white no-underline"
+              >Outlets</a
+            >
+          </li>
+          <li>
+            <a href="./memberships.html" class="text-white no-underline"
+              >Memberships</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" class="text-white no-underline"
+              >Contact</a
+            >
+          </li>
+        </ul>
       </div>
-
-      <!-- tranquility qr with google play button  -->
-      <div class="flex flex-col gap-2 items-center justify-center px-10">
+      <!--End Col-->
+      <div class="lg:mx-auto text-left">
+        <h4 class="text-lg text-white font-semibold mb-7">Support</h4>
+        <ul
+          class="list-none text-base flex flex-col gap-3 transition-all duration-500"
+        >
+          <li>
+            <a href="javascript:;" class="text-white no-underline"
+              >Customer Support</a
+            >
+          </li>
+          <li>
+            <a href="javascript:;" class="text-white no-underline"
+              >Terms & Conditions</a
+            >
+          </li>
+          <li>
+            <a href="javascript:;" class="text-white no-underline"
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!--End Col-->
+      <div class="lg:mx-auto text-left">
+        <h4 class="text-lg text-white font-semibold mb-7">Contact Us</h4>
+        <ul
+          class="list-none text-base flex flex-col gap-3 transition-all duration-500"
+        >
+          <li class="flex break-all gap-2 items-center">
+            <span class="text-base">Lazimpat,Kathmandu</span>
+          </li>
+          <li class="flex break-all gap-2 items-center">
+            <span class="text-base">+977-9802021286</span>
+          </li>
+        </ul>
+      </div>
+      <!--End Col-->
+      <div class="lg:mx-auto text-left">
         <div class="p-0.5 rounded-sm bg-white h-32 w-32">
           <img
             src="/public/images/tranquility-QR.png"
@@ -84,18 +100,46 @@
             class="h-full w-full object-cover"
           />
         </div>
-        <h6 class="font-medium text-xs">Scan to download App</h6>
-        <img
-          src="/public/images/Google-play.png"
-          alt=""
-          class="h-20 w-full object-scale-down"
-        />
+        <h5 class="font-medium text-base mt-2">Scan to download App</h5>
       </div>
     </div>
-  </div>
-  <div class="w-full py-2 text-center">
-    <h4 class="font-medium text-sm md:text-base">
-      Copyright &copy; Tranquility Spa - All Rights Reserved
-    </h4>
+    <!--Grid-->
+    <div
+      class="mt-5 py-5 border-t-2 border-solid border-gray-100/50 border-x-0 border-b-0"
+    >
+      <div
+        class="flex items-center justify-center flex-col lg:justify-between lg:flex-row"
+      >
+        <span class="text-sm">
+          Copyright &copy; Tranquility Spa - All Rights Reserved</span
+        >
+        <div class="text-xl flex mt-4 space-x-4 sm:justify-center lg:mt-0">
+          <a
+            href="javascript:;"
+            class="text-white rounded-full transition-all duration-500 flex justify-center items-center"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a
+            href="javascript:;"
+            class="relative text-white rounded-full transition-all duration-500 flex justify-center items-center"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a
+            href="javascript:;"
+            class="relative text-white rounded-full transition-all duration-500 flex justify-center items-center"
+          >
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a
+            href="javascript:;"
+            class="relative text-white rounded-full transition-all duration-500 flex justify-center items-center"
+          >
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>

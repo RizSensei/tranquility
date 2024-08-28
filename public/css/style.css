@@ -42,4 +42,22 @@
   transform: translateX(0);
 }
 
+/* line separator between nav items except last one  */
+@media (min-width: 1024px) {
+  .nav-ul > li:not(:last-child) {
+    border-right: 1px solid rgb(209 213 219);
+  }
+  .nav-ul > li{
+    padding: 0px 12px;
+  }
+}
 
+.service-button:not(:last-child) {
+  border-right: 1px solid rgb(209 213 219);
+}
+
+
+.service-btn-active , .package-btn-active{
+  background-color: #305A30;
+  color: white;
+}

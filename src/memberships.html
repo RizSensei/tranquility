@@ -87,58 +87,46 @@
             id="navbar_content"
             class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
           >
-          <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
-            <li class="px-1">
-              <a href="/src/services.html" class="nav-item"
-                >SERVICES</a
+            <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
+              <li class="px-1">
+                <a href="/src/services.html" class="nav-item">SERVICES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/packages.html" class="nav-item">PACKAGES</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/memberships.html" class="nav-item">MEMBERSHIP</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/about.html" class="nav-item">ABOUT</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
+              </li>
+              <li class="px-1">
+                <a href="/src/contact.html" class="nav-item">CONTACT</a>
+              </li>
+            </ul>
+            <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+              <a
+                href="/src/book_now.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/packages.html" class="nav-item"
-                >PACKAGES</a
+                <ion-icon name="calendar-outline"></ion-icon>
+                <h5 class="font-medium text-sm">Book Now</h5>
+              </a>
+              <a
+                href="/src/download_app.html"
+                class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
               >
-            </li>
-            <li class="px-1">
-              <a href="/src/memberships.html" class="nav-item"
-                >MEMBERSHIP</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/about.html" class="nav-item"
-                >ABOUT</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/outlets.html" class="nav-item"
-                >OUTLETS</a
-              >
-            </li>
-            <li class="px-1">
-              <a href="/src/contact.html" class="nav-item"
-                >CONTACT</a
-              >
-            </li>
-          </ul>
-          <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
-            <a
-              href="/src/book_now.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
-            >
-              <ion-icon name="calendar-outline"></ion-icon>
-              <h5 class="font-medium text-sm">Book Now</h5>
-            </a>
-            <a
-              href="/src/download_app.html"
-              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
-            >
-              <img
-                src="/public/images/play-store-icon.png"
-                alt=""
-                class="h-4"
-              />
-              <h5 class="font-medium text-sm">Download App</h5>
-            </a>
-          </div>
+                <img
+                  src="/public/images/play-store-icon.png"
+                  alt=""
+                  class="h-4"
+                />
+                <h5 class="font-medium text-sm">Download App</h5>
+              </a>
+            </div>
           </div>
           <span class="lg:hidden p-5">
             <ion-icon
@@ -149,7 +137,7 @@
           </span>
         </div>
       </div>
-      
+
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -180,14 +168,10 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
                   <li class="px-1">
-                    <a href="/src/services.html" class="nav-item"
-                      >SERVICES</a
-                    >
+                    <a href="/src/services.html" class="nav-item">SERVICES</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/packages.html" class="nav-item"
-                      >PACKAGES</a
-                    >
+                    <a href="/src/packages.html" class="nav-item">PACKAGES</a>
                   </li>
                   <li class="px-1">
                     <a href="/src/memberships.html" class="nav-item"
@@ -195,22 +179,18 @@
                     >
                   </li>
                   <li class="px-1">
-                    <a href="/src/about.html" class="nav-item"
-                      >ABOUT</a
-                    >
+                    <a href="/src/about.html" class="nav-item">ABOUT</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/outlets.html" class="nav-item"
-                      >OUTLETS</a
-                    >
+                    <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
                   </li>
                   <li class="px-1">
-                    <a href="/src/contact.html" class="nav-item"
-                      >CONTACT</a
-                    >
+                    <a href="/src/contact.html" class="nav-item">CONTACT</a>
                   </li>
                 </ul>
-                <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+                <div
+                  class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
+                >
                   <a
                     href="/src/book_now.html"
                     class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
@@ -249,20 +229,216 @@
     </header>
     <!-- navbar ends  -->
 
-    <main class="px-10 md:px-20 2xl:px-40 py-5 sm:py-10 flex-grow">
+    <main class="relative px-10 md:px-20 2xl:px-40 py-5 flex-grow">
+      <div class="sticky top-0 z-20 w-full bg-white">
+        <div
+          class="flex justify-center text-sm md:text-base text-center gap-x-5 gap-y-1 border border-solid border-x-0 border-gray-100 py-2"
+        >
+          <a href="#premium-membership" class="nav-item">Premium Membership</a>
+          <a href="#loyalty-program" class="nav-item">Loyalty Program</a>
+          <a href="#wellness-card" class="nav-item"
+            >Tranquility Wellness Card</a
+          >
+        </div>
+      </div>
+
       <div
-        class="flex justify-center text-sm md:text-base text-center gap-x-10 gap-y-1 border border-solid border-x-0 divide-x border-gray-100 py-2"
+        id="premium-membership"
+        class="pt-16 grid grid-cols-1 md:grid-cols-2 gap-5"
       >
-        <a href="" class="text-black no-underline"
-          >Premium Membership</a
-        >
-        <a href="" class="text-black no-underline">Loyalty Program</a>
-        <a href="" class="text-black no-underline"
-          >Tranquility Wellness Card</a
-        >
+        <div class="font-marcellus flex flex-col">
+          <h6>PREMINUM</h6>
+          <h1 class="font-medium mb-2">SOALTEE MEMBERSHIP</h1>
+          <img
+            src="/public/images/fancy-border-line.png"
+            alt=""
+            class="w-[300px]"
+          />
+          <ul
+            class="font-dm-sans mt-5 list-none flex flex-col gap-3 text-paragraph text-sm"
+          >
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                Use of Gymnasium, steam, Jacuzzi, Tennis Court and other regular
+                fitness activities like Zumba, Aerobics, Yoga, Meditation etc.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                50% Discount on all Individual Spa Therapy at all tranquility
+                Spa outlets in Nepal and abroad.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Free Spa Therapy vouchers.*</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Condition Applied</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>1 Complementary cake of member's choice on their birthday.</p>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="px-5 2xl:px-20">
+          <img
+            src="/public/mock-images/membership/membership-1.png"
+            alt=""
+            class="h-[300px] md:h-[250px] lg:h-[325px] xl:h-[350px] 2xl:h-[400px] w-full shadow-xl"
+          />
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="order-1 md:order-2 font-marcellus flex flex-col">
+          <h6>PREMINUM</h6>
+          <h1 class="font-medium mb-2">SLEMONTREE MEMBERSHIP</h1>
+          <img
+            src="/public/images/fancy-border-line.png"
+            alt=""
+            class="w-[300px]"
+          />
+          <ul
+            class="font-dm-sans mt-5 list-none flex flex-col gap-3 text-paragraph text-sm"
+          >
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                Use of Gymnasium, steam, Jacuzzi, Tennis Court and other regular
+                fitness activities like Zumba, Aerobics, Yoga, Meditation etc.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                50% Discount on all Individual Spa Therapy at all tranquility
+                Spa outlets in Nepal and abroad.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Free Spa Therapy vouchers.*</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Condition Applied</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>1 Complementary cake of member's choice on their birthday.</p>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="order-2 md:order-1 px-5 2xl:px-20">
+          <img
+            src="/public/mock-images/membership/membership-2.png"
+            alt=""
+            class="h-[300px] md:h-[250px] lg:h-[325px] xl:h-[350px] 2xl:h-[400px] w-full"
+          />
+        </div>
+      </div>
+
+      <div
+        id="loyalty-program"
+        class="pt-16 grid grid-cols-1 md:grid-cols-2 gap-5"
+      >
+        <div class="font-marcellus flex flex-col">
+          <h1 class="font-medium mb-2">LOYALTY PROGRAM</h1>
+          <img
+            src="/public/images/fancy-border-line.png"
+            alt=""
+            class="w-[300px]"
+          />
+          <ul
+            class="font-dm-sans mt-5 list-none flex flex-col gap-3 text-paragraph text-sm"
+          >
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                Use of Gymnasium, steam, Jacuzzi, Tennis Court and other regular
+                fitness activities like Zumba, Aerobics, Yoga, Meditation etc.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>
+                50% Discount on all Individual Spa Therapy at all tranquility
+                Spa outlets in Nepal and abroad.
+              </p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Free Spa Therapy vouchers.*</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>Condition Applied</p>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-2xl text-primary"
+                ><ion-icon name="checkmark-circle"></ion-icon
+              ></span>
+              <p>1 Complementary cake of member's choice on their birthday.</p>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="px-5 2xl:px-20">
+          <img
+            src="/public/mock-images/membership/membership-1.png"
+            alt=""
+            class="h-[300px] md:h-[250px] lg:h-[325px] xl:h-[350px] 2xl:h-[400px] w-full shadow-xl"
+          />
+        </div>
+      </div>
+
+      <div id="wellness-card" class="pt-16">
+        <div class="font-marcellus flex flex-col items-center mb-10">
+          <h1 class="font-medium mb-2">TRANQUILITY WELLNESS CARD</h1>
+          <img
+            src="/public/images/fancy-border-line.png"
+            alt=""
+            class="w-[300px]"
+          />
+        </div>
+        <div class="w-full h-96 bg-gray-50"></div>
       </div>
     </main>
-
 
     <!-- footer begins  -->
     <div id="footer_memberships"></div>

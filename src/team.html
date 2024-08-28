@@ -248,7 +248,7 @@
     </header>
     <!-- navbar ends  -->
 
-    <main class="px-10 md:px-20 2xl:px-40 py-10 flex-grow">
+    <main class="px-10 md:px-20 2xl:px-40 py-5 flex-grow">
       <!-- team heading  -->
       <div
         class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
@@ -265,7 +265,7 @@
       <!-- package lists  -->
       <div
         id="team-lists"
-        class="mt-12 md:mt-24 grid grid-cols-2 xl:grid-cols-4 gap-2"
+        class="mt-10 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10"
       >
         <script>
           const teams = [
@@ -294,12 +294,12 @@
                      >
           <img src="/public/mock-images/team/team-${
             index + 1
-          }.png" alt="" class="h-[200px] md:h-[375px] w-full">
+          }.png" alt="" class="h-[200px] sm:h-[250px] md:h-[300px] 2xl:h-[450px] w-full">
           <div class="flex flex-col md:items-center md:gap-1 mt-2">
-            <h2 class="font-marcellus text-base md:text-3xl text-black no-underline font-medium line-clamp-1">${
+            <h2 class="font-marcellus text-base md:text-2xl text-black no-underline font-medium line-clamp-1">${
               team.name
             }</a>
-            <h4 class="font-medium text-xs md:text-lg text-paragraph"> ${
+            <h4 class="font-medium text-xs md:text-base text-paragraph"> ${
               team.designation
             }</h5>
           </div>
