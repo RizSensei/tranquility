@@ -61,3 +61,133 @@
   background-color: #305A30;
   color: white;
 }
+
+/* about page page css starts */
+
+.paragraph-text{
+  text-align: justify;
+  --tw-text-opacity: 1;
+  color: rgb(97 97 97 / var(--tw-text-opacity)) /* #616161 */;
+}
+
+/* about page page css ends */
+
+/* membership page css starts */
+
+.premium-container, .loyalty-container, .wellness-card-container {
+  font-family: 'Marcellus', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-title, .loyalty-title {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.border-line {
+  width: 300px;
+}
+
+.membership-benefits, .loyalty-benefits {
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 1.25rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #4a4a4a; 
+  font-size: 0.875rem; 
+}
+
+.service-benefits{
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: #4a4a4a; 
+  font-size: 0.9rem;
+}
+
+.membership-benefits > li, .loyalty-benefits >li{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.service-benefits>li{
+  display: flex;
+  gap: 0.25rem;
+}
+
+.icon {
+  font-size: 1.75rem;
+  color: #305A30;
+}
+
+/* Image Container */
+.membership-image-container {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1536px) {
+  .membership-image-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.membership-image {
+  height: 300px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .membership-image {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .membership-image {
+    height: 325px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .membership-image {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .membership-image {
+    height: 400px;
+  }
+}
+
+
+
+.wellness-card-container{
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+/* membership page css ends */
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scroll {
+  overflow: hidden;
+}

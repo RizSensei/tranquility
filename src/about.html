@@ -22,71 +22,165 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
   </head>
-  <body class="font-dm-sans flex flex-col h-screen">
+  <body class="font-dm-sans flex flex-col h-screen w-full">
+    <div class="flex flex-col flex-grow">
     <!-- navbar begins -->
     <header class="w-full">
       <div
-        class="font-marcellus text-sm md:text-base flex flex-col md:flex-row text-white bg-secondary"
+        class="font-marcellus text-sm md:text-base flex text-white bg-secondary"
       >
         <div
-          class="py-2 md:py-5 md:pl-20 md:pr-10 flex flex-col items-center justify-center"
+          class="px-1 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
         >
           <a href="./packages.html" class="no-underline text-white">
-            <h4 class="font-medium underline md:no-underline">
-              MONSOON MASSAGE PACKAGES
+            <h4 class="font-medium no-underline px-2">
+              MONSOON MASSAGE PACKAGE
             </h4>
           </a>
         </div>
-        <div class="hidden md:flex">
-          <div class="flex">
-            <div class="h-24 w-40">
-              <img
-                src="/public/mock-images/packages/package-4.png"
-                alt=""
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <div class="flex flex-col justify-center gap-3 px-5">
-              <a href="" class="text-white smooth-anchor-transform">
-                <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
-              </a>
-              <h4 class="font-medium">RS 3000/-</h4>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="h-24 w-40">
-              <img
-                src="/public/mock-images/packages/package-4.png"
-                alt=""
-                class="h-full w-full object-cover"
-              />
-            </div>
-            <div class="flex flex-col justify-center gap-3 px-5">
-              <a href="" class="text-white smooth-anchor-transform">
-                <h4 class="font-medium">STONE MASSAGE PACKAGE</h4>
-              </a>
-              <h4 class="font-medium">RS 3000/-</h4>
-            </div>
+        <div
+          class="scrollbar-hide flex-1 overflow-x-auto overflow-y-hidden bg-yellow-500"
+        >
+          <div id="package-scroll" class="flex snap-proximity snap-x">
+            <script>
+              const packageScrollContent = [1, 2, 3, 4, 5, 6]
+                .map(
+                  (package, index) => `
+                      <div class="flex shrink-0 snap-center">
+                      <div class="h-full w-24">
+                        <img
+                          src="/public/mock-images/packages/package-4.png"
+                          alt=""
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div class="flex flex-col justify-center gap-1 px-5">
+                        <a href="" class="text-white smooth-anchor-transform">
+                          <h4 class="font-semibold text-sm line-clamp-1">STONE MASSAGE PACKAGE</h4>
+                        </a>
+                        <h4 class="font-medium text-sm">RS 3000/-</h4>
+                      </div>
+                    </div>
+                      `
+                )
+                .join("");
+              document.getElementById("package-scroll").innerHTML =
+                packageScrollContent;
+            </script>
           </div>
         </div>
       </div>
-
-      <div class="flex justify-between px-5 md:px-10 2xl:px-20 py-1">
-        <div class="h-24 sm:h-28 w-32 sm:w-40">
-          <a href="./index.html">
-            <img
-              src="/public/images/tranquility-logo.png"
-              alt="Tranquility Logo"
-              class="h-full w-full object-cover"
-            />
-          </a>
+    </header>
+    <nav
+      class="sticky top-0 z-50 bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-1 shadow-md"
+    >
+      <div class="h-20 w-28">
+        <a href="./index.html">
+          <img
+            src="/public/images/tranquility-logo.png"
+            alt="Tranquility Logo"
+            class="h-full w-full object-cover"
+          />
+        </a>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div
+          id="navbar_content"
+          class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
+        >
+          <ul class="nav-ul list-none flex flex-col lg:flex-row text-sm">
+            <li>
+              <a href="/src/services.html" class="nav-item">SERVICES</a>
+            </li>
+            <li>
+              <a href="/src/packages.html" class="nav-item">PACKAGES</a>
+            </li>
+            <li>
+              <a href="/src/memberships.html" class="nav-item">MEMBERSHIP</a>
+            </li>
+            <li class="relative group">
+              <a href="/src/about.html" class="nav-item">ABOUT</a>
+              <!-- Dropdown -->
+              <div
+                class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
+              >
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                  >Welcome To Tranquility Spa</a
+                >
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                  >History</a
+                >
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                  >Our Story and Vision</a
+                >
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                  >Team Members</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
+            </li>
+            <li>
+              <a href="/src/contact.html" class="nav-item">CONTACT</a>
+            </li>
+          </ul>
+          <div class="w-full flex flex-col lg:flex-row lg:justify-end gap-2">
+            <a
+              href="/src/book_now.html"
+              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
+            >
+              <ion-icon name="calendar-outline"></ion-icon>
+              <h5 class="font-medium text-sm">Book Now</h5>
+            </a>
+            <a
+              href="/src/download_app.html"
+              class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
+            >
+              <img
+                src="/public/images/play-store-icon.png"
+                alt=""
+                class="h-4"
+              />
+              <h5 class="font-medium text-sm">Download App</h5>
+            </a>
+          </div>
         </div>
+        <span class="lg:hidden p-5">
+          <ion-icon
+            id="open-mobile-nav"
+            name="menu-outline"
+            class="cursor-pointer"
+          ></ion-icon>
+        </span>
+      </div>
+    </nav>
 
-        <div class="flex flex-col justify-center">
-          <div
-            id="navbar_content"
-            class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
-          >
+    <!-- mobile navbar side  -->
+    <div
+      id="mobile-sidebar"
+      class="lg:hidden fixed top-0 z-[100] overflow-hidden h-screen w-full bg-black bg-opacity-50"
+    >
+      <div class="flex w-full h-full">
+        <div
+          class="h-full w-80 bg-white px-3 pt-3 pb-5 flex flex-col gap-5 overflow-y-auto"
+        >
+          <div class="flex justify-between items-center">
+            <a href="./index.html">
+              <img
+                src="/public/images/tranquility-logo.png"
+                alt=""
+                class="h-24 w-32"
+              />
+            </a>
+            <button
+              class="border-none bg-white cursor-pointer text-3xl text-red-500"
+            >
+              <ion-icon id="close-mobile-nav" name="close-outline"></ion-icon>
+            </button>
+          </div>
+          <hr class="bg-primary w-full h-0.5" />
+          <div class="flex flex-col gap-5 justify-between">
             <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
               <li class="px-1">
                 <a href="/src/services.html" class="nav-item">SERVICES</a>
@@ -97,9 +191,19 @@
               <li class="px-1">
                 <a href="/src/memberships.html" class="nav-item">MEMBERSHIP</a>
               </li>
-              <li class="px-1">
+              <li class="px-1 relative group">
                 <a href="/src/about.html" class="nav-item">ABOUT</a>
+                <!-- Dropdown -->
+                <div
+                  class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-transform duration-300 ease-in-out"
+                >
+                  <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item">Welcome To Tranquility Spa</a>
+                  <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item">History</a>
+                  <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item">Our Story and Vision</a>
+                  <a href="#" class="px-4 py-2 hover:bg-gray-100 nav-item">Team Members</a>
+                </div>
               </li>
+              
               <li class="px-1">
                 <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
               </li>
@@ -128,110 +232,25 @@
               </a>
             </div>
           </div>
-          <span class="lg:hidden p-5">
-            <ion-icon
-              id="open-mobile-nav"
-              name="menu-outline"
-              class="cursor-pointer"
-            ></ion-icon>
-          </span>
-        </div>
-      </div>
-
-      <div class="lg:hidden">
-        <div
-          id="mobile-sidebar"
-          class="fixed top-0 z-[100] overflow-hidden h-screen w-full bg-black bg-opacity-50"
-        >
-          <div class="flex w-full h-full">
-            <div
-              class="h-full w-80 bg-white px-3 pt-3 pb-5 flex flex-col gap-5 overflow-y-auto"
-            >
-              <div class="flex justify-between items-center">
-                <a href="./index.html">
-                  <img
-                    src="/public/images/tranquility-logo.png"
-                    alt=""
-                    class="h-24 w-32"
-                  />
-                </a>
-                <button
-                  class="border-none bg-white cursor-pointer text-3xl text-red-500"
-                >
-                  <ion-icon
-                    id="close-mobile-nav"
-                    name="close-outline"
-                  ></ion-icon>
-                </button>
-              </div>
-              <hr class="bg-primary w-full h-0.5" />
-              <div class="flex flex-col gap-5 justify-between">
-                <ul class="list-none flex flex-col lg:flex-row gap-5 text-sm">
-                  <li class="px-1">
-                    <a href="/src/services.html" class="nav-item">SERVICES</a>
-                  </li>
-                  <li class="px-1">
-                    <a href="/src/packages.html" class="nav-item">PACKAGES</a>
-                  </li>
-                  <li class="px-1">
-                    <a href="/src/memberships.html" class="nav-item"
-                      >MEMBERSHIP</a
-                    >
-                  </li>
-                  <li class="px-1">
-                    <a href="/src/about.html" class="nav-item">ABOUT</a>
-                  </li>
-                  <li class="px-1">
-                    <a href="/src/outlets.html" class="nav-item">OUTLETS</a>
-                  </li>
-                  <li class="px-1">
-                    <a href="/src/contact.html" class="nav-item">CONTACT</a>
-                  </li>
-                </ul>
-                <div
-                  class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
-                >
-                  <a
-                    href="/src/book_now.html"
-                    class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
-                  >
-                    <ion-icon name="calendar-outline"></ion-icon>
-                    <h5 class="font-medium text-sm">Book Now</h5>
-                  </a>
-                  <a
-                    href="/src/download_app.html"
-                    class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
-                  >
-                    <img
-                      src="/public/images/play-store-icon.png"
-                      alt=""
-                      class="h-4"
-                    />
-                    <h5 class="font-medium text-sm">Download App</h5>
-                  </a>
-                </div>
-              </div>
-              <hr class="bg-primary w-full h-0.5" />
-              <div class="flex flex-col gap-2">
-                <legend class="font-marcellus text-xl">WE ARE ON SOCIAL</legend>
-                <div class="flex gap-3 text-xl text-primary">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                  <ion-icon name="logo-instagram"></ion-icon>
-                  <ion-icon name="logo-facebook"></ion-icon>
-                  <ion-icon name="mail-outline"></ion-icon>
-                </div>
-              </div>
+          <hr class="bg-primary w-full h-0.5" />
+          <div class="flex flex-col gap-2">
+            <legend class="font-marcellus text-xl">WE ARE ON SOCIAL</legend>
+            <div class="flex gap-3 text-xl text-primary">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-            <div class="flex-grow"></div>
           </div>
         </div>
+        <div id="mobile-sidebar-right" class="flex-grow backdrop-blur-sm"></div>
       </div>
-    </header>
+    </div>
     <!-- navbar ends  -->
 
     <main class="px-10 md:px-20 2xl:px-40 py-5 flex-grow">
       <div
-        class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
+        class="mt-5 font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
       >
         <h1 class="font-medium w-full text-center">ABOUT TRANQUILITY</h1>
         <img
@@ -241,7 +260,7 @@
         />
       </div>
 
-      <div class="sticky top-0 z-20 w-full bg-white">
+      <div class="mt-3 z-20 w-full bg-white">
         <div
           class="py-3 text-center flex justify-center overflow-y-auto gap-x-2 md:gap-x-5 text-sm md:text-base"
         >
@@ -258,10 +277,11 @@
         <!-- <img src="/public/images/tranquility-about.png" alt="" class="h-full w-full object-cover"> -->
       </div>
 
-      <div class="flex flex-col">
-        <div id="welcome" class="pt-16 flex flex-col gap-5">
+      <div id="about" class="flex flex-col">
+
+        <div id="welcome" class="pt-24 flex flex-col gap-5">
           <h2 class="font-marcellus">WELCOME TO TRANQUILITY SPA</h2>
-          <p class="text-paragraph text-justify">
+          <p class="paragraph-text">
             Established in 2008, the Tranquility Spa has become the leader in
             Spa and wellness industry with numerous outlets in different cities
             and luxury hotels in Nepal and abroad. We are the first Day Spa to
@@ -280,7 +300,7 @@
           </p>
         </div>
 
-        <div id="history" class="pt-16 flex flex-col gap-5">
+        <div id="history" class="pt-24 flex flex-col gap-5">
           <h2 class="font-marcellus">HISTORY</h2>
 
           <div id="history-content" class="flex flex-col gap-5 sm:gap-1">
@@ -303,7 +323,7 @@
               </div>
             </div>
             <div class="flex flex-col justify-center text-primary">
-              <p class="text-paragraph text-justify">
+              <p class="paragraph-text">
                 Lorem ipsum dolor sit amet consectetur. Et lobortis imperdiet aliquam libero venenatis ullamcorper augue ultricies. Suspendisse non cursus rhoncus id et. Id lobortis volutpat imperdiet diam feugiat dictum sed. Eu proin nibh phasellus nunc cursus elit id.
               </p>
             </div>
@@ -318,9 +338,9 @@
           </div>
         </div>
 
-        <div id="story-and-vision" class="pt-16 flex flex-col gap-5">
+        <div id="story-and-vision" class="pt-24 flex flex-col gap-5">
           <h2 class="font-marcellus">OUR STORY</h2>
-          <p class="text-paragraph text-justify">
+          <p class="paragraph-text">
             Established in 2008, the Tranquility Spa has become the leader in
             Spa and wellness industry with numerous outlets in different cities
             and luxury hotels in Nepal and abroad. We are the first Day Spa to
@@ -339,9 +359,9 @@
           </p>
         </div>
 
-        <div class="pt-16 flex flex-col gap-5">
+        <div class="pt-24 flex flex-col gap-5">
           <h2 class="font-marcellus">OUR VISION</h2>
-          <p class="text-paragraph text-justify">
+          <p class="paragraph-text">
             Established in 2008, the Tranquility Spa has become the leader in
             Spa and wellness industry with numerous outlets in different cities
             and luxury hotels in Nepal and abroad. We are the first Day Spa to
@@ -365,5 +385,7 @@
     <!-- footer begins  -->
     <div id="footer_about"></div>
     <!-- footer ends  -->
+
+    </div>
   </body>
 </html>

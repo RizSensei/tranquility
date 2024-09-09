@@ -43,3 +43,13 @@
       this.classList.add("package-btn-active");
     });
   });
+
+  // hide overflow when sidebar opens and vice-versa 
+
+  document.getElementById('open-mobile-nav').addEventListener('click', function() {
+    document.body.classList.add('no-scroll');
+  });
+
+  document.getElementById('close-mobile-nav').addEventListener('click', function() {
+    document.body.classList.remove('no-scroll');
+  });
