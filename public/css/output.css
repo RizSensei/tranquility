@@ -1609,6 +1609,18 @@
     padding-right: 2.5rem
   }
 
+  .md\:pt-10 {
+    padding-top: 2.5rem
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem
+  }
+
+  .md\:pt-16 {
+    padding-top: 4rem
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem
