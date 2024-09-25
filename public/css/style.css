@@ -30,6 +30,7 @@
 }
 
 
+
 /* mobile sidebar show and hide  */
 #mobile-sidebar {
   opacity: 0;
@@ -114,6 +115,7 @@
 .membership-benefits > li, .loyalty-benefits >li{
   display: flex;
   gap: 0.5rem;
+  z-index: -10;
 }
 
 .service-benefits>li{
@@ -190,4 +192,53 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+/* active navbar css */
+
+.nav-item.active {
+  text-decoration: underline;
+  color: #305A30;
+  font-family: 600;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  transition: width 0.3s ease;
+}
+
+
+#gallery-scroll > .owl-nav > .owl-prev, #gallery-scroll > .owl-nav > .owl-next {
+  position: absolute;
+  z-index: 40;
+  top: 40%;
+  background-color: rgba(255,255,255,0.5) !important;
+  padding: 0px 10px !important;
+  color: white !important;
+  font-size: 60px;
+}
+
+#gallery-scroll > .owl-nav > .owl-prev{
+  left: 20px;
+}
+#gallery-scroll > .owl-nav > .owl-next{
+  right: 20px;
+}
+
+
+#testimonial-scroll > .owl-nav > .owl-prev, #testimonial-scroll > .owl-nav > .owl-next {
+  position: absolute;
+  z-index: 40;
+  top: 40%;
+  background-color: rgba(255,255,255,0.5) !important;
+  color: #305A30 !important;
+  padding: 0px 10px !important;
+  font-size: 60px;
+}
+
+#testimonial-scroll > .owl-nav > .owl-prev{
+  left: 20px;
+}
+#testimonial-scroll > .owl-nav > .owl-next{
+  right: 20px;
 }

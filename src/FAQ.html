@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-
+    <title>Tranquility-Home</title>
     <!-- link -->
-    <link rel="stylesheet" href="../public/css/output.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/output.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+
     <script defer src="/public/js/fetch.js"></script>
     <script defer src="/public/js/script.js"></script>
+    <script defer src="/public/js/owl.js"></script>
+    <script defer src="/public/js/alpine.js"></script>
 
     <script
       type="module"
@@ -20,16 +22,41 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- jquery cdn  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- owl carousel files starts  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    ></script>
+    <!-- owl carousel files ends  -->
+
+    <!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
   </head>
+
   <body class="font-dm-sans flex flex-col h-screen w-full">
     <div class="flex flex-col flex-grow">
       <!-- navbar begins -->
-      <header class="sticky top-0 z-50 w-full">
+      <header id="header" class="sticky top-0 z-50 w-full">
         <div
-          class="font-marcellus text-sm md:text-base flex text-white bg-secondary"
+          class="font-marcellus text-sm md:text-base flex text-white bg-yellow-500"
         >
           <div
-            class="px-1 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
+            class="px-1 py-3 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
           >
             <a href="./packages.html" class="no-underline text-white">
               <h4 class="font-medium no-underline px-2">
@@ -37,20 +64,21 @@
               </h4>
             </a>
           </div>
-          <div
-            class="scrollbar-hide flex-1 overflow-x-auto overflow-y-hidden bg-yellow-500"
-          >
-            <div id="package-scroll" class="flex snap-proximity snap-x">
+          <div class="h-full flex-1 bg-yellow-500 overflow-hidden">
+            <div
+              id="package-scroll"
+              class="owl-carousel owl-carousel-package owl-theme h-max"
+            >
               <script>
                 const packageScrollContent = [1, 2, 3, 4, 5, 6]
                   .map(
                     (package, index) => `
-                      <div class="flex shrink-0 snap-center">
-                      <div class="h-full w-24">
+                      <div class="flex shrink-0">
+                      <div class="h-full w-28 shrink-0">
                         <img
                           src="/public/mock-images/packages/package-4.png"
                           alt=""
-                          class="h-full w-full object-cover"
+                          class="h-full w-full object-cover shrink-0"
                         />
                       </div>
                       <div class="flex flex-col justify-center gap-1 px-5">
@@ -70,7 +98,8 @@
           </div>
         </div>
         <nav
-          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-1 shadow-md"
+          id="header-nav"
+          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-2 shadow-md"
         >
           <div class="h-20 w-28">
             <a href="./index.html">
@@ -104,16 +133,24 @@
                   <div
                     class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
                   >
-                    <a href="/src/about.html#welcome" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#welcome"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Welcome To Tranquility Spa</a
                     >
-                    <a href="/src/about.html#history" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#history"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >History</a
                     >
-                    <a href="/src/about.html#story-and-vision" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#story-and-vision"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Our Story and Vision</a
                     >
-                    <a href="/src/team.html" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/team.html"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Team Members</a
                     >
                   </div>
@@ -128,13 +165,13 @@
               <div
                 class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
               >
-                <a
+                <!-- <a
                   href="/src/book_now.html"
                   class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
                 >
                   <ion-icon name="calendar-outline"></ion-icon>
                   <h5 class="font-medium text-sm">Book Now</h5>
-                </a>
+                </a> -->
                 <a
                   href="/src/download_app.html"
                   class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
@@ -202,16 +239,24 @@
                   <div
                     class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
                   >
-                    <a href="/src/about.html#welcome" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#welcome"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Welcome To Tranquility Spa</a
                     >
-                    <a href="/src/about.html#history" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#history"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >History</a
                     >
-                    <a href="/src/about.html#story-and-vision" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#story-and-vision"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Our Story and Vision</a
                     >
-                    <a href="/src/team.html" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/team.html"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Team Members</a
                     >
                   </div>
@@ -266,162 +311,94 @@
       </div>
       <!-- navbar ends  -->
 
-      <main
-        class="px-10 md:px-20 2xl:px-40 py-10 flex-grow"
-        style="
-          background-image: url('/public/images/contact-background.png');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-attachment: fixed;
-        "
-      >
-        <div class="h-full w-full flex flex-col items-center justify-center">
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-            <div class="flex flex-col gap-5">
-              <div class="flex flex-col">
-                <legend class="text-2xl md:text-3xl font-marcellus">
-                  CONTACT US
-                </legend>
-                <div class="mt-5 grid grid-cols-1 gap-3">
-                  <div class="flex gap-2">
-                    <div
-                      class="h-14 flex flex-col items-center justify-center rounded-md shadow-md text-3xl px-5 py-3 bg-light-gray text-primary bg-white"
-                    >
-                      <ion-icon name="business"></ion-icon>
-                    </div>
-                    <div class="h-full flex flex-col items-center">
-                      <h1 class="font-marcellus font-semibold text-xl">
-                        TRANQUILITY SPA
-                      </h1>
-                    </div>
-                  </div>
-                  <div class="flex gap-2">
-                    <div
-                      class="h-14 flex flex-col items-center justify-center rounded-md shadow-md text-3xl px-5 py-3 bg-light-gray text-primary bg-white"
-                    >
-                      <ion-icon name="mail"></ion-icon>
-                    </div>
-                    <div class="flex flex-col">
-                      <h1 class="font-marcellus font-semibold text-xl">
-                        Email Address
-                      </h1>
-                      <h1 class="font-medium text-base text-gray-600 break-all">
-                        info@tranquilityspa.com.np,info@tranquilityspa.com.np,info@tranquilityspa.com.np
-                      </h1>
-                    </div>
-                  </div>
-                  <div class="flex gap-2">
-                    <div
-                      class="h-14 flex flex-col items-center justify-center rounded-md shadow-md text-3xl px-5 py-3 bg-light-gray text-primary bg-white"
-                    >
-                      <ion-icon name="call"></ion-icon>
-                    </div>
-                    <div class="flex flex-col">
-                      <h1 class="font-marcellus font-semibold text-xl">
-                        Phone Number
-                      </h1>
-                      <h1 class="font-medium text-base text-gray-600 break-">
-                        +977-1-4419181,4413825
-                      </h1>
-                    </div>
-                  </div>
-                  <div class="flex gap-2">
-                    <div
-                      class="h-14 flex flex-col items-center justify-center rounded-md shadow-md text-3xl px-5 py-3 bg-light-gray text-primary bg-white"
-                    >
-                      <ion-icon name="location"></ion-icon>
-                    </div>
-                    <div class="flex flex-col">
-                      <h1 class="font-marcellus font-semibold text-xl">
-                        Head-Office
-                      </h1>
-                      <h1 class="font-medium text-base text-gray-600">
-                        Kathmandu 44600, Nepal
-                      </h1>
-                    </div>
-                  </div>
+      <div class="flex-grow">
+        <section class="py-10">
+          <div class="px-5">
+            <div class="flex flex-col justify-center items-center">
+              <div class="max-w-md 2xl:max-w-xl">
+                <div class="mb-6">
+                  <h2
+                    class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-2 lg:text-left"
+                  >
+                    Looking for answers?
+                  </h2>
                 </div>
-              </div>
-              <div class="flex flex-col gap-3 md:gap-5">
-                <legend class="font-marcellus text-2xl md:text-3xl">
-                  WE ARE ON SOCIAL
-                </legend>
-                <div class="flex gap-3 text-2xl md:text-3xl text-primary">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                  <ion-icon name="logo-instagram"></ion-icon>
-                  <ion-icon name="logo-facebook"></ion-icon>
-                  <ion-icon name="mail-outline"></ion-icon>
-                </div>
+                <div
+                  id="faq-section"
+                  class="accordion-group"
+                  data-accordion="default-accordion"
+                >
+                  <script>
+                    const faqs = [
+                      {
+                        question: "What services do you offer?What services do you offer?",
+                        answer:
+                          "We offer a wide range of spa services including massages, facials, body treatments, manicures, pedicures, and wellness therapies. Please visit our services page for detailed information and pricing.",
+                      },
+                      {
+                        question: "How do I book an appointment?",
+                        answer:
+                          "You can easily book an appointment online through our website, or call us directly. We also accept walk-ins, but we recommend booking in advance to ensure availability.",
+                      },
+                      {
+                        question: "What should I bring for my spa appointment?",
+                        answer:
+                          "We provide everything you need for your treatment, including robes, towels, and slippers. If you’re receiving a massage or body treatment, we suggest wearing comfortable clothing.",
+                      },
+                      {
+                        question: "What is your cancellation policy?",
+                        answer:
+                          "We kindly ask for at least 24 hours' notice for any cancellations or rescheduling. Cancellations within 24 hours may incur a fee. Please refer to our cancellation policy for full details.",
+                      },
+                      {
+                        question: "Are gift certificates available?",
+                        answer:
+                          "Yes, we offer gift certificates for all our services. You can purchase them online or at the spa, and they make great gifts for friends and loved ones!",
+                      },
+                    ];
+
+                    const faqsList = faqs
+                      .map(
+                        (faq, index) => `
+                             <div class="bg-white my-2 border border-solid  border-x-0 border-t-0  border-gray-200 border-b" x-data="accordion(${index})">
+              <h2
+                @click="handleClick()"
+                class="text-lg text-primary flex flex-row justify-between items-center gap-5 font-semibold p-3 cursor-pointer"
+              >
+                <span>${faq.question}</span>
+                <svg
+                  :class="handleRotate()"
+                  class="fill-current text-primary h-6 w-6 transform transition-transform duration-500 shrink-0"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                </svg>
+              </h2>
+              <div
+                x-ref="tab"
+                :style="handleToggle()"
+                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
+              >
+                <p class="p-3 font-medium text-gray-900">
+                  ${faq.answer}
+                </p>
               </div>
             </div>
-            <div
-              class="xl:col-span-2 w-full flex flex-col items-center justify-center bg-white"
-            >
-              <form
-                class="w-full shadow-xl px-5 sm:px-10 lg:px-20 py-5 sm:py-10"
-              >
-                <div class="grid grid-cols-1 xl:grid-cols-2 gap-5">
-                  <div>
-                    <input
-                      type="text"
-                      id="first_name"
-                      class="bg-white border border-gray-300 text-gray-500 text-base rounded-md focus:ring-primary focus:border-primary block w-full px-3 py-2"
-                      placeholder="First Name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="last_name"
-                      class="bg-white border border-gray-300 text-gray-500 text-base rounded-md focus:ring-primary focus:border-primary block w-full px-3 py-2"
-                      placeholder="Last Name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      id="email"
-                      class="bg-white border border-gray-300 text-gray-500 text-base rounded-md focus:ring-primary focus:border-primary block w-full px-3 py-2"
-                      placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      id="phone"
-                      class="bg-white border border-gray-300 text-gray-500 text-base rounded-md focus:ring-primary focus:border-primary block w-full px-3 py-2"
-                      placeholder="Phone Number"
-                      required
-                    />
-                  </div>
-                  <textarea
-                    id="message"
-                    rows="8"
-                    class="bg-white xl:col-span-2 border border-gray-300 text-gray-500 text-base rounded-md focus:ring-primary focus:border-primary block w-full px-3 py-2"
-                    placeholder="Message"
-                    required
-                  ></textarea>
+                         `
+                      )
+                      .join("");
+
+                    document.getElementById("faq-section").innerHTML = faqsList;
+                  </script>
                 </div>
-                <div class="flex justify-end">
-                  <button
-                    type="submit"
-                    class="mt-5 w-max cursor-pointer text-primary hover:text-white border-primary bg-white hover:bg-primary focus:outline-none font-medium rounded-md text-base px-10 py-1.5 text-center uppercase"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </section>
+      </div>
 
       <!-- footer begins  -->
-      <div id="footer_contact"></div>
+      <div id="footer_faq"></div>
       <!-- footer ends  -->
     </div>
   </body>

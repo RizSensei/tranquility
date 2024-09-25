@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerComponentIdList = [
         'footer_index', 'footer_about', 'footer_services', 'footer_packages',
         'footer_contact', 'footer_outlets', 'footer_memberships', 'footer_team',
-        'footer_download_app', 'footer_book_now', 'footer_package_description'
+        'footer_download_app', 'footer_book_now', 'footer_package_description', 'footer_faq'
     ];
 
     navbarComponentIdList.forEach(componentId => {

@@ -5,7 +5,7 @@
 @layer base {
   /* smooth hover underline effect */
   .nav-item {
-    @apply no-underline text-black hover:text-primary transform ease-in-out duration-150;
+    @apply no-underline text-black hover:text-amber-600 transform ease-in-out duration-150 font-medium;
   }
 
   .smooth-transform {
