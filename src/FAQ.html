@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquility-Home</title>
-    <!-- link -->
+
+    <!-- tailwind output source -->
     <link rel="stylesheet" href="/public/css/output.css" />
+
+    <!-- public css file  -->
     <link rel="stylesheet" href="/public/css/style.css" />
 
+    <!-- public script files  -->
     <script defer src="/public/js/fetch.js"></script>
     <script defer src="/public/js/script.js"></script>
     <script defer src="/public/js/owl.js"></script>
     <script defer src="/public/js/alpine.js"></script>
 
+    <!-- ionicons sources  -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -23,10 +28,10 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <!-- jquery cdn  -->
+    <!-- jquery cdn sources  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- owl carousel files starts  -->
+    <!-- owl carousel sources  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -39,9 +44,8 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     ></script>
-    <!-- owl carousel files ends  -->
 
-    <!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
+    <!-- alpine sources  -->
     <script
       defer
       src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
@@ -53,7 +57,7 @@
       <!-- navbar begins -->
       <header id="header" class="sticky top-0 z-50 w-full">
         <div
-          class="font-marcellus text-sm md:text-base flex text-white bg-yellow-500"
+          class="font-marcellus text-sm md:text-base flex text-white bg-primary"
         >
           <div
             class="px-1 py-3 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
@@ -64,7 +68,7 @@
               </h4>
             </a>
           </div>
-          <div class="h-full flex-1 bg-yellow-500 overflow-hidden">
+          <div class="h-full flex-1 bg-primary overflow-hidden">
             <div
               id="package-scroll"
               class="owl-carousel owl-carousel-package owl-theme h-max"
@@ -82,8 +86,8 @@
                         />
                       </div>
                       <div class="flex flex-col justify-center gap-1 px-5">
-                        <a href="" class="text-white smooth-anchor-transform">
-                          <h4 class="font-semibold text-sm line-clamp-1">STONE MASSAGE PACKAGE</h4>
+                        <a href="" class="no-underline text-white smooth-anchor-transform">
+                          <h4 class="font-semibold text-sm break-all line-clamp-2">STONE MASSAGE PACKAGE</h4>
                         </a>
                         <h4 class="font-medium text-sm">RS 3000/-</h4>
                       </div>
@@ -99,9 +103,9 @@
         </div>
         <nav
           id="header-nav"
-          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-2 shadow-md"
+          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-0.5 shadow-sm"
         >
-          <div class="h-20 w-28">
+          <div class="h-20 w-24">
             <a href="./index.html">
               <img
                 src="/public/images/tranquility-logo.png"
@@ -115,7 +119,9 @@
               id="navbar_content"
               class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
             >
-              <ul class="nav-ul list-none flex flex-col lg:flex-row text-sm">
+              <ul
+                class="text-white nav-ul list-none flex flex-col lg:flex-row text-sm"
+              >
                 <li>
                   <a href="/src/services.html" class="nav-item">SERVICES</a>
                 </li>
@@ -128,31 +134,38 @@
                   >
                 </li>
                 <li class="relative group">
-                  <p class="nav-item cursor-pointer">ABOUT</p>
+                  <a href="/src/about.html" class="nav-item cursor-pointer"
+                    >ABOUT</a
+                  >
                   <!-- Dropdown -->
                   <div
-                    class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
+                    class="hidden z-10 lg:absolute w-max bg-white group-hover:block"
                   >
-                    <a
-                      href="/src/about.html#welcome"
-                      class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Welcome To Tranquility Spa</a
+                    <div class="h-4"></div>
+                    <div
+                      class="py-2 flex flex-col border border-solid border-t-0 border-gray-200 lg:shadow-lg"
                     >
-                    <a
-                      href="/src/about.html#history"
-                      class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >History</a
-                    >
-                    <a
-                      href="/src/about.html#story-and-vision"
-                      class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Our Story and Vision</a
-                    >
-                    <a
-                      href="/src/team.html"
-                      class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Team Members</a
-                    >
+                      <a
+                        href="/src/about.html#welcome"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Welcome To Tranquility Spa</a
+                      >
+                      <a
+                        href="/src/about.html#history"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >History</a
+                      >
+                      <a
+                        href="/src/about.html#story-and-vision"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Our Story and Vision</a
+                      >
+                      <a
+                        href="/src/team.html"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Team Members</a
+                      >
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -400,6 +413,16 @@
       <!-- footer begins  -->
       <div id="footer_faq"></div>
       <!-- footer ends  -->
+    </div>
+
+    <div class="fixed top-1/2 -translate-y-1/2 -right-14 z-50">
+      <a
+        href="/src/book_now.html"
+        class="text-sm 2xl:text-base cursor-pointer bg-primary text-white px-5 py-2 pb-4 rounded-md -rotate-90 border no-underline border-solid border-white flex gap-2 items-center"
+      >
+        <ion-icon name="calendar-outline"></ion-icon>
+        <h3 class="font-medium">Book Now</h3>
+      </a>
     </div>
   </body>
 </html>

@@ -23,11 +23,11 @@ $(document).ready(function () {
         1000: {
           items: 3,
         },
-        1200: {
-          items: 4,
-        },
+        // 1200: {
+        //   items: 4,
+        // },
         1500: {
-          items: 5,
+          items: 4,
         },
       },
     });

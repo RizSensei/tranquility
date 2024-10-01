@@ -270,6 +270,10 @@
   grid-column: 1 / -1
 }
 
+.m-5 {
+  margin: 1.25rem
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto
@@ -348,6 +352,13 @@
   -webkit-line-clamp: 1
 }
 
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -419,6 +430,14 @@
   height: 1.5rem
 }
 
+.h-72 {
+  height: 18rem
+}
+
+.h-80 {
+  height: 20rem
+}
+
 .h-96 {
   height: 24rem
 }
@@ -427,8 +446,8 @@
   height: 145px
 }
 
-.h-\[200px\] {
-  height: 200px
+.h-\[250px\] {
+  height: 250px
 }
 
 .h-\[300px\] {
@@ -585,6 +604,14 @@
   scroll-snap-align: center
 }
 
+.scroll-mt-\[125px\] {
+  scroll-margin-top: 125px
+}
+
+.list-inside {
+  list-style-position: inside
+}
+
 .list-outside {
   list-style-position: outside
 }
@@ -679,6 +706,10 @@
   row-gap: 0.25rem
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem
+}
+
 .gap-y-8 {
   row-gap: 2rem
 }
@@ -743,6 +774,10 @@
 
 .border-0 {
   border-width: 0px
+}
+
+.border-2 {
+  border-width: 2px
 }
 
 .border-\[2px\] {
@@ -835,11 +870,6 @@
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity))
-}
-
-.bg-\[\#B0CFBE\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(176 207 190 / var(--tw-bg-opacity))
 }
 
 .bg-black {
@@ -1035,10 +1065,6 @@
   padding-top: 0.75rem
 }
 
-.pt-32 {
-  padding-top: 8rem
-}
-
 .pt-5 {
   padding-top: 1.25rem
 }
@@ -1053,6 +1079,10 @@
 
 .text-justify {
   text-align: justify
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 .text-2xl {
@@ -1103,6 +1133,10 @@
   font-weight: 500
 }
 
+.font-normal {
+  font-weight: 400
+}
+
 .font-semibold {
   font-weight: 600
 }
@@ -1138,6 +1172,11 @@
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity))
+}
+
+.text-neutral-700 {
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity))
 }
 
 .text-paragraph {
@@ -1238,6 +1277,13 @@
   -webkit-line-clamp: 1
 }
 
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -1312,8 +1358,8 @@
     height: 245px
   }
 
-  .sm\:h-\[250px\] {
-    height: 250px
+  .sm\:h-\[300px\] {
+    height: 300px
   }
 
   .sm\:w-40 {
@@ -1404,10 +1450,6 @@
 
   .md\:h-\[250px\] {
     height: 250px
-  }
-
-  .md\:h-\[300px\] {
-    height: 300px
   }
 
   .md\:h-\[450px\] {
@@ -1586,6 +1628,14 @@
     height: 325px
   }
 
+  .lg\:h-\[400px\] {
+    height: 400px
+  }
+
+  .lg\:h-\[350px\] {
+    height: 350px
+  }
+
   .lg\:max-w-full {
     max-width: 100%
   }
@@ -1600,6 +1650,10 @@
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr))
   }
 
   .lg\:grid-cols-6 {
@@ -1680,10 +1734,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr))
   }
 
-  .xl\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr))
-  }
-
   .xl\:flex-row {
     flex-direction: row
   }
@@ -1714,6 +1764,10 @@
 
   .\32xl\:h-\[80vh\] {
     height: 80vh
+  }
+
+  .\32xl\:h-\[\] {
+    height: 
   }
 
   .\32xl\:max-w-xl {

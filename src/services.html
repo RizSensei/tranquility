@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tranquility-Services</title>
+    <title>Tranquility-Home</title>
 
-    <!-- link -->
-    <link rel="stylesheet" href="../public/css/output.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <!-- tailwind output source -->
+    <link rel="stylesheet" href="/public/css/output.css" />
+
+    <!-- public css file  -->
+    <link rel="stylesheet" href="/public/css/style.css" />
+
+    <!-- public script files  -->
     <script defer src="/public/js/fetch.js"></script>
     <script defer src="/public/js/script.js"></script>
+    <script defer src="/public/js/owl.js"></script>
+    <script defer src="/public/js/alpine.js"></script>
 
+    <!-- ionicons sources  -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -19,16 +27,40 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- jquery cdn sources  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- owl carousel sources  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    ></script>
+
+    <!-- alpine sources  -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
   </head>
+
   <body class="font-dm-sans flex flex-col h-screen w-full">
     <div class="flex flex-col flex-grow">
       <!-- navbar begins -->
-      <header class="sticky top-0 z-50 w-full">
+      <header id="header" class="sticky top-0 z-50 w-full">
         <div
-          class="font-marcellus text-sm md:text-base flex text-white bg-secondary"
+          class="font-marcellus text-sm md:text-base flex text-white bg-primary"
         >
           <div
-            class="px-1 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
+            class="px-1 py-3 flex flex-col items-center justify-center text-center w-36 md:w-64 shrink-0"
           >
             <a href="./packages.html" class="no-underline text-white">
               <h4 class="font-medium no-underline px-2">
@@ -36,25 +68,26 @@
               </h4>
             </a>
           </div>
-          <div
-            class="scrollbar-hide flex-1 overflow-x-auto overflow-y-hidden bg-yellow-500"
-          >
-            <div id="package-scroll" class="flex snap-proximity snap-x">
+          <div class="h-full flex-1 bg-primary overflow-hidden">
+            <div
+              id="package-scroll"
+              class="owl-carousel owl-carousel-package owl-theme h-max"
+            >
               <script>
                 const packageScrollContent = [1, 2, 3, 4, 5, 6]
                   .map(
                     (package, index) => `
-                      <div class="flex shrink-0 snap-center">
-                      <div class="h-full w-24">
+                      <div class="flex shrink-0">
+                      <div class="h-full w-28 shrink-0">
                         <img
                           src="/public/mock-images/packages/package-4.png"
                           alt=""
-                          class="h-full w-full object-cover"
+                          class="h-full w-full object-cover shrink-0"
                         />
                       </div>
                       <div class="flex flex-col justify-center gap-1 px-5">
-                        <a href="" class="text-white smooth-anchor-transform">
-                          <h4 class="font-semibold text-sm line-clamp-1">STONE MASSAGE PACKAGE</h4>
+                        <a href="" class="no-underline text-white smooth-anchor-transform">
+                          <h4 class="font-semibold text-sm break-all line-clamp-2">STONE MASSAGE PACKAGE</h4>
                         </a>
                         <h4 class="font-medium text-sm">RS 3000/-</h4>
                       </div>
@@ -69,9 +102,10 @@
           </div>
         </div>
         <nav
-          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-1 shadow-md"
+          id="header-nav"
+          class="bg-white flex justify-between px-5 md:px-10 2xl:px-20 py-0.5 shadow-sm"
         >
-          <div class="h-20 w-28">
+          <div class="h-20 w-24">
             <a href="./index.html">
               <img
                 src="/public/images/tranquility-logo.png"
@@ -85,7 +119,9 @@
               id="navbar_content"
               class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
             >
-              <ul class="nav-ul list-none flex flex-col lg:flex-row text-sm">
+              <ul
+                class="text-white nav-ul list-none flex flex-col lg:flex-row text-sm"
+              >
                 <li>
                   <a href="/src/services.html" class="nav-item">SERVICES</a>
                 </li>
@@ -98,23 +134,38 @@
                   >
                 </li>
                 <li class="relative group">
-                  <p class="nav-item cursor-pointer">ABOUT</p>
+                  <a href="/src/about.html" class="nav-item cursor-pointer"
+                    >ABOUT</a
+                  >
                   <!-- Dropdown -->
                   <div
-                    class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
+                    class="hidden z-10 lg:absolute w-max bg-white group-hover:block"
                   >
-                    <a href="/src/about.html#welcome" class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Welcome To Tranquility Spa</a
+                    <div class="h-4"></div>
+                    <div
+                      class="py-2 flex flex-col border border-solid border-t-0 border-gray-200 lg:shadow-lg"
                     >
-                    <a href="/src/about.html#history" class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >History</a
-                    >
-                    <a href="/src/about.html#story-and-vision" class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Our Story and Vision</a
-                    >
-                    <a href="/src/team.html" class="px-4 py-2 hover:bg-gray-100 nav-item"
-                      >Team Members</a
-                    >
+                      <a
+                        href="/src/about.html#welcome"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Welcome To Tranquility Spa</a
+                      >
+                      <a
+                        href="/src/about.html#history"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >History</a
+                      >
+                      <a
+                        href="/src/about.html#story-and-vision"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Our Story and Vision</a
+                      >
+                      <a
+                        href="/src/team.html"
+                        class="px-4 py-2 hover:bg-gray-100 nav-item"
+                        >Team Members</a
+                      >
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -127,13 +178,13 @@
               <div
                 class="w-full flex flex-col lg:flex-row lg:justify-end gap-2"
               >
-                <a
+                <!-- <a
                   href="/src/book_now.html"
                   class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-primary text-white flex items-center justify-center gap-3"
                 >
                   <ion-icon name="calendar-outline"></ion-icon>
                   <h5 class="font-medium text-sm">Book Now</h5>
-                </a>
+                </a> -->
                 <a
                   href="/src/download_app.html"
                   class="no-underline cursor-pointer text-xl px-3 py-2 border-none rounded-[4px] bg-black text-white flex items-center justify-center gap-3"
@@ -201,16 +252,24 @@
                   <div
                     class="hidden z-10 lg:absolute left-0 py-2 w-max bg-white group-hover:flex flex-col lg:shadow-lg"
                   >
-                    <a href="/src/about.html#welcome" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#welcome"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Welcome To Tranquility Spa</a
                     >
-                    <a href="/src/about.html#history" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#history"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >History</a
                     >
-                    <a href="/src/about.html#story-and-vision" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/about.html#story-and-vision"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Our Story and Vision</a
                     >
-                    <a href="/src/team.html" class="px-4 py-2 hover:bg-gray-100 nav-item"
+                    <a
+                      href="/src/team.html"
+                      class="px-4 py-2 hover:bg-gray-100 nav-item"
                       >Team Members</a
                     >
                   </div>
@@ -267,9 +326,9 @@
 
       <main class="px-5 md:px-10 2xl:px-20 py-5 flex-grow">
         <div
-          class="font-marcellus text-sm md:text-base flex flex-col items-center gap-1 text-primary"
+          class="font-marcellus text-sm md:text-base flex flex-col items-center gap-3 text-primary"
         >
-          <h1 class="font-medium">OUR SERVICES</h1>
+          <!-- <h1 class="font-medium">OUR SERVICES</h1> -->
           <h1 class="mt-2 font-medium">SOALTEE HOTEL</h1>
           <img
             src="/public/images/fancy-border-line.png"
@@ -278,98 +337,131 @@
           />
         </div>
 
-        <!-- types of services  -->
-        <div
-          id="service-button-lists"
-          class="mt-10 flex justify-start md:justify-center overflow-x-auto md:flex-wrap"
-        >
-          <script>
-            const serviceLists = [
-              "Signature Massage",
-              "Relaxation Massage",
-              "Theraputic Massage",
-              "Mini Massage",
-              "Spa Package",
-              "Theraputic Massage",
-              "Mini Massage",
-              "Spa Package",
-              "Theraputic Massage",
-            ];
-
-            const serviceButtonListsContent = serviceLists
-              .map(
-                (service) => `
-        <button class="service-button cursor-pointer text-sm md:text-base px-3 py-2 font-medium bg-white border-none hover:bg-primary hover:text-white duration-300 transform ease-in-out">${service}</button>`
-              )
-              .join("");
-
-            document.getElementById("service-button-lists").innerHTML =
-              serviceButtonListsContent;
-          </script>
-        </div>
-
-        <!-- service lists  -->
-        <div
-          id="service-lists"
-          class="mt-10 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5"
-        >
-          <script>
-            const services = [
-              {
-                name: "Tranquility Signature Massage",
-                price: 6000,
-              },
-              {
-                name: "Hot Stone Therapy",
-                price: 6000,
-              },
-              {
-                name: "Head And Shoulder Massage",
-                price: 6000,
-              },
-              {
-                name: "Tranquility Signature Massage",
-                price: 6000,
-              },
-              {
-                name: "Hot Stone Therapy",
-                price: 6000,
-              },
-              {
-                name: "Head And Shoulder Massage",
-                price: 6000,
-              },
-            ];
-
-            const serviceListsContent = services
-              .map(
-                (service, index) => `
-                      <div>
-          <img src="/public/mock-images/services/service-${
-            index + 1
-          }.png" alt="" class="h-[145px] sm:h-[245px] md:h-[200px] xl:h-[245px] w-full object-cover">
-          <div class="flex flex-col gap-1 mt-2">
-            <a href="/src/service_description.html" class="text-sm md:text-base xl:text-lg text-black no-underline hover:underline font-medium line-clamp-1 transform duration-150 ease-in-out">${
-              service.name
-            }</a>
-            <h5 class="font-medium text-paragraph text-xs md:text-sm">Starting From Rs ${
-              service.price
-            }/-</h5>
+        <div class="mb-5 mt-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div class="col-span-1 flex flex-col justify-center">
+              <p class="text-sm text-justify text-neutral-700">
+                Soaltee Hotel Limited (SHL), a pioneer in Nepal's hospitality
+                sector, owns the Soaltee Kathmandu, a 12-acre five-star deluxe
+                hotel. A landmark in the city of Kathmandu with a rich heritage,
+                the hotel is the proud recipient of several prestigious awards
+                and accolades over the years. Soaltee Hotel Limited is renowned
+                for its rich history as a pioneer in Nepal’s tourism industry
+                with its contribution of luxurious properties and legendary
+                hospitality across the region. <br /><br />Soaltee Hotel is the
+                first hotel to attract foreign investment and to entrust its
+                management to the leading Indian Hotel Company, the Oberoi
+                Hotels Private Limited in the year 1969. Since then the Company
+                expanded its horizons and moved with the times to be the first
+                Nepali Company to obtain a loan from the International Finance
+                Corporation (IFC), the private arm of the World Bank, for the
+                construction of additional guestrooms bringing up the number of
+                total rooms to 282 luxurious rooms.
+              </p>
+            </div>
+            <div class="cols-span-1">
+              <div class="h-72 w-full">
+                <img
+                  src="http://www.soalteehotel.com/images/banners/homepage-banner-1.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
-       `
-              )
-              .join("");
 
-            document.getElementById("service-lists").innerHTML =
-              serviceListsContent;
-          </script>
+        <div>
+          <div class="flex h-full items-center gap-5">
+            <h1 class="text-primary font-semibold">Services</h1>
+            <hr class="bg-primary bg-opacity-50 h-1 flex-grow w-full">
+          </div>
+          <!-- types of services  -->
+          <div
+            id="service-button-lists"
+            class="mt-5 flex justify-start md:justify-center overflow-x-auto md:flex-wrap"
+          >
+            <script>
+              const serviceLists = [
+                "Signature Massage",
+                "Relaxation Massage",
+                "Theraputic Massage",
+                "Mini Massage",
+                "Spa Package",
+                "Theraputic Massage",
+                "Mini Massage",
+                "Spa Package",
+                "Theraputic Massage",
+              ];
+              const serviceButtonListsContent = serviceLists
+                .map(
+                  (service) => `
+          <button class="service-button cursor-pointer text-sm px-3 py-2 font-medium bg-white border-none hover:bg-primary hover:text-white duration-300 transform ease-in-out">${service}</button>`
+                )
+                .join("");
+              document.getElementById("service-button-lists").innerHTML =
+                serviceButtonListsContent;
+            </script>
+          </div>
+          <!-- service lists  -->
+          <div
+            id="service-lists"
+            class="mt-10 grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-5"
+          >
+            <script>
+              const services = [
+                {
+                  name: "Tranquility Signature Massage",
+                  price: 6000,
+                },
+                {
+                  name: "Hot Stone Therapy",
+                  price: 6000,
+                },
+                {
+                  name: "Head And Shoulder Massage",
+                  price: 6000,
+                },
+              ];
+              const serviceListsContent = services
+                .map(
+                  (service, index) => `
+                        <div>
+            <img src="/public/mock-images/services/service-${
+              index + 1
+            }.png" alt="" class="h-[145px] sm:h-[245px] md:h-[200px] xl:h-[245px] w-full object-cover">
+            <div class="flex flex-col gap-1 mt-2">
+              <a href="/src/service_description.html" class="text-sm md:text-base xl:text-lg text-black no-underline hover:underline font-medium line-clamp-1 transform duration-150 ease-in-out">${
+                service.name
+              }</a>
+              <h5 class="font-medium text-paragraph text-xs md:text-sm">Starting From Rs ${
+                service.price
+              }/-</h5>
+            </div>
+          </div>
+                 `
+                )
+                .join("");
+              document.getElementById("service-lists").innerHTML =
+                serviceListsContent;
+            </script>
+          </div>
         </div>
       </main>
 
       <!-- footer begins  -->
       <div id="footer_services"></div>
       <!-- footer ends  -->
+    </div>
+
+    <div class="fixed top-1/2 -translate-y-1/2 -right-14 z-50">
+      <a
+        href="/src/book_now.html"
+        class="text-sm 2xl:text-base cursor-pointer bg-primary text-white px-5 py-2 pb-4 rounded-md -rotate-90 border no-underline border-solid border-white flex gap-2 items-center"
+      >
+        <ion-icon name="calendar-outline"></ion-icon>
+        <h3 class="font-medium">Book Now</h3>
+      </a>
     </div>
   </body>
 </html>

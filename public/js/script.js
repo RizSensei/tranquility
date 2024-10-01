@@ -113,4 +113,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const videoContainer = document.getElementById("video-container");
   const remainingHeight = window.innerHeight - 200;
   videoContainer.style.height = `${remainingHeight}px`;
+
+
+  // document.getElementById("welcome").style.scrollMarginTop = `${combinedHeight}px`;
+  // document.getElementById("history").style.scrollMarginTop = `${headerHeight}px`;
+  // document.getElementById("story-and-vision").style.scrollMarginTop = `${headerHeight}px`;
 });

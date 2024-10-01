@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tranquility-Home</title>
-    <!-- link -->
+
+    <!-- tailwind output source -->
     <link rel="stylesheet" href="/public/css/output.css" />
+
+    <!-- public css file  -->
     <link rel="stylesheet" href="/public/css/style.css" />
 
+    <!-- public script files  -->
     <script defer src="/public/js/fetch.js"></script>
     <script defer src="/public/js/script.js"></script>
     <script defer src="/public/js/owl.js"></script>
+    <script defer src="/public/js/alpine.js"></script>
 
+    <!-- ionicons sources  -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -22,10 +28,10 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <!-- jquery cdn  -->
+    <!-- jquery cdn sources  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <!-- owl carousel files starts  -->
+    <!-- owl carousel sources  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -38,7 +44,12 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     ></script>
-    <!-- owl carousel files ends  -->
+
+    <!-- alpine sources  -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body class="font-dm-sans flex flex-col h-screen w-full">
@@ -75,8 +86,8 @@
                         />
                       </div>
                       <div class="flex flex-col justify-center gap-1 px-5">
-                        <a href="" class="text-white smooth-anchor-transform">
-                          <h4 class="font-semibold text-sm line-clamp-1">STONE MASSAGE PACKAGE</h4>
+                        <a href="" class="no-underline text-white smooth-anchor-transform">
+                          <h4 class="font-semibold text-sm break-all line-clamp-2">STONE MASSAGE PACKAGE</h4>
                         </a>
                         <h4 class="font-medium text-sm">RS 3000/-</h4>
                       </div>
@@ -108,7 +119,9 @@
               id="navbar_content"
               class="hidden lg:flex lg:flex-col xl:flex-row gap-2 items-center"
             >
-              <ul class="text-white nav-ul list-none flex flex-col lg:flex-row text-sm">
+              <ul
+                class="text-white nav-ul list-none flex flex-col lg:flex-row text-sm"
+              >
                 <li>
                   <a href="/src/services.html" class="nav-item">SERVICES</a>
                 </li>
@@ -121,12 +134,17 @@
                   >
                 </li>
                 <li class="relative group">
-                  <p class="nav-item cursor-pointer">ABOUT</p>
+                  <a href="/src/about.html" class="nav-item cursor-pointer"
+                    >ABOUT</a
+                  >
                   <!-- Dropdown -->
                   <div
                     class="hidden z-10 lg:absolute w-max bg-white group-hover:block"
-                  ><div class="h-4"></div>
-                    <div class=" py-2 flex flex-col border border-solid border-t-0 border-gray-200 lg:shadow-lg">
+                  >
+                    <div class="h-4"></div>
+                    <div
+                      class="py-2 flex flex-col border border-solid border-t-0 border-gray-200 lg:shadow-lg"
+                    >
                       <a
                         href="/src/about.html#welcome"
                         class="px-4 py-2 hover:bg-gray-100 nav-item"
@@ -308,7 +326,9 @@
 
       <div class="flex-grow">
         <!-- video section -->
-        <main class="aspect-video md:h-[70vh] xl:h-[75vh] 2xl:h-[80vh] min-w-screen max-h-fit w-full">
+        <main
+          class="aspect-video md:h-[70vh] xl:h-[75vh] 2xl:h-[80vh] min-w-screen max-h-fit w-full"
+        >
           <video autoplay loop class="h-full w-full object-cover">
             <source
               src="https://videos.pexels.com/video-files/6616372/6616372-hd_1920_1080_25fps.mp4"
@@ -331,9 +351,7 @@
             <div class="flex flex-col gap-5">
               <h1 class="font-marcellus text-3xl md:text-4xl font-medium">
                 NEPAL’S LARGEST CHAIN OF
-                <span class="bg-[#B0CFBE] text-white rounded-sm px-3 py-0.5"
-                  >SPA</span
-                >
+                <span class="text-primary font-semibold">SPA</span>
               </h1>
               <div class="flex items-center gap-3">
                 <img
@@ -394,67 +412,111 @@
         <!-- gallery section -->
         <div class="w-full pt-5 bg-opacity-10">
           <div class="flex gap-5 justify-center items-center">
-            <hr class="h-1 bg-primary w-48"/>
+            <hr class="h-1 bg-primary w-48" />
             <h1
               class="text-3xl font-semibold font-marcellus text-primary text-center"
             >
               Our Gallery
             </h1>
-            <hr class="h-1 bg-primary w-48"/>
-
+            <hr class="h-1 bg-primary w-48" />
           </div>
 
           <div
             id="gallery-scroll"
             class="owl-carousel owl-carousel-gallery owl-theme pt-5 h-full"
           >
-          <script>
-             const galleryScrollContent = [1, 2, 3, 4, 5, 6]
-                  .map(
-                    (gallery, index) => `
+            <script>
+              const galleryScrollContent = [1, 2, 3, 4, 5, 6]
+                .map(
+                  (gallery, index) => `
                       <div class="h-96 w-full">
                         <img src="https://images.pexels.com/photos/3727117/pexels-photo-3727117.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-full w-full object-cover"/>
                         </div>
                       `
-                  )
-                  .join("");
-                document.getElementById("gallery-scroll").innerHTML =
-                  galleryScrollContent;
-          </script>
+                )
+                .join("");
+              document.getElementById("gallery-scroll").innerHTML =
+                galleryScrollContent;
+            </script>
+          </div>
         </div>
+
+        <!-- special offers section  -->
+        <div class="w-full pt-5 bg-opacity-10">
+          <div class="flex gap-5 justify-center items-center">
+            <hr class="h-1 bg-primary w-48" />
+            <h1
+              class="text-3xl font-semibold font-marcellus text-primary text-center"
+            >
+              Special Offers
+            </h1>
+            <hr class="h-1 bg-primary w-48" />
+          </div>
+          <div class="mt-5 sm:px-10 md:px-20 2xl:px-40">
+            <div class="w-full h-80 rounded-md bg-gray-100"></div>
+          </div>
         </div>
 
         <!-- testimonials section  -->
-         <div class="w-full py-16">
+        <div class="w-full py-16">
+          <div class="flex gap-5 justify-center items-center">
+            <hr class="h-1 bg-primary w-48" />
+            <h1
+              class="text-3xl font-semibold font-marcellus text-primary text-center"
+            >
+              What our Client Says
+            </h1>
+            <hr class="h-1 bg-primary w-48" />
+          </div>
           <div class="flex justify-center">
             <div class="relative max-w-xl xl:max-w-3xl w-full">
               <div
                 id="testimonial-scroll"
                 class="owl-carousel owl-carousel-testimonial owl-theme pt-5 h-full"
               >
-              <div class="flex flex-col items-center text-center gap-5">
-                <ion-icon name="unlink-outline"></ion-icon>
-                <p class="font-marcellus text-xl text-primary font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, eaque. Voluptates dolor ipsa quasi, iste eum deleniti recusandae officiis</p>
-                <div class="flex flex-col gap-1 items-center text-center">
-                  <div class="h-24 w-24 overflow-hidden">
-                    <img src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-full w-full rounded-full object-cover"/>
+                <div class="flex flex-col items-center text-center gap-5">
+                  <ion-icon name="unlink-outline"></ion-icon>
+                  <p class="font-marcellus text-xl text-primary font-semibold">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolorem, eaque. Voluptates dolor ipsa quasi, iste eum
+                    deleniti recusandae officiis
+                  </p>
+                  <div class="flex flex-col gap-1 items-center text-center">
+                    <div class="h-24 w-24 overflow-hidden">
+                      <img
+                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="h-full w-full rounded-full object-cover"
+                      />
+                    </div>
+                    <h1 class="text-lg font-semibold font-marcellus">
+                      Rohan Bajracharya
+                    </h1>
+                    <p class="text-gray-500">Customer</p>
                   </div>
-                  <h1 class="text-lg font-semibold font-marcellus">Rohan Bajracharya</h1>
-                  <p class="text-gray-500">Customer</p>
                 </div>
-              </div>
-              <div class="flex flex-col items-center text-center gap-5">
-                <ion-icon name="unlink-outline"></ion-icon>
-                <p class="font-marcellus text-xl text-primary font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, eaque. Voluptates dolor ipsa quasi, iste eum deleniti recusandae officiis</p>
-                <div class="flex flex-col gap-1 items-center text-center">
-                  <div class="h-24 w-24 overflow-hidden">
-                    <img src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="h-full w-full rounded-full object-cover"/>
+                <div class="flex flex-col items-center text-center gap-5">
+                  <ion-icon name="unlink-outline"></ion-icon>
+                  <p class="font-marcellus text-xl text-primary font-semibold">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dolorem, eaque. Voluptates dolor ipsa quasi, iste eum
+                    deleniti recusandae officiis
+                  </p>
+                  <div class="flex flex-col gap-1 items-center text-center">
+                    <div class="h-24 w-24 overflow-hidden">
+                      <img
+                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt=""
+                        class="h-full w-full rounded-full object-cover"
+                      />
+                    </div>
+                    <h1 class="text-lg font-semibold font-marcellus">
+                      Rohan Bajracharya
+                    </h1>
+                    <p class="text-gray-500">Customer</p>
                   </div>
-                  <h1 class="text-lg font-semibold font-marcellus">Rohan Bajracharya</h1>
-                  <p class="text-gray-500">Customer</p>
                 </div>
-              </div>
-              <!-- <script>
+                <!-- <script>
                 const testimonialScrollContent = [1, 2, 3, 4, 5, 6]
                      .map(
                        (testimonial, index) => `
@@ -465,10 +527,22 @@
                    document.getElementById("testimonial-scroll").innerHTML =
                      testimonialScrollContent;
                        </script> -->
-                       </div>
+              </div>
             </div>
           </div>
+        </div>
 
+        <!-- location section  -->
+        <div class="h-96 w-full">
+          <iframe
+            class="h-full w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.439304061227!2d85.29201507568355!3d27.71389514697764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcf631b741%3A0x165ee22894040e08!2sTranquility%20Spa!5e0!3m2!1sen!2snp!4v1727800177844!5m2!1sen!2snp"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
 
       <!-- footer begins  -->
@@ -477,8 +551,9 @@
     </div>
 
     <div class="fixed top-1/2 -translate-y-1/2 -right-14 z-50">
-      <a href="/src/book_now.html"
-        class="text-sm 2xl:text-base cursor-pointer bg-primary text-white px-5 py-2 pb-4 rounded-md -rotate-90 border no-underline border-white flex gap-2 items-center"
+      <a
+        href="/src/book_now.html"
+        class="text-sm 2xl:text-base cursor-pointer bg-primary text-white px-5 py-2 pb-4 rounded-md -rotate-90 border no-underline border-solid border-white flex gap-2 items-center"
       >
         <ion-icon name="calendar-outline"></ion-icon>
         <h3 class="font-medium">Book Now</h3>
